@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NewsEntry from "../components/NewsEntry.astro";
+
+export async function getStaticPaths() {
+  const files = import.meta.glob("../../news/*.json", { eager: true });
+
+  return Object.entries(files)
+    .map(([path, data]) => {
+      const date = path.match(/(\d{4}-\d{2}-\d{2})\.json$/)?.[1];
+      if (!date) return null;
+      return { params: { date }, props: { data } };
+    })
+    .filter(Boolean);
+}
+
+const { data } = Astro.props as { data: any };
+const { date } = Astro.params;
+
+// Prev / next navigation
+const allFiles = import.meta.glob("../../news/*.json", { eager: true });
+const allDates = Object.keys(allFiles)
+  .map((p) => p.match(/(\d{4}-\d{2}-\d{2})\.json$/)?.[1])
+  .filter(Boolean)
+  .sort() as string[];
+
+const idx = allDates.indexOf(date!);
+const prev = idx > 0 ? allDates[idx - 1] : null;
+const next = idx < allDates.length - 1 ? allDates[idx + 1] : null;
+---
+
+<Layout title={date} description={`News digest for ${date}.`}>
+  <NewsEntry data={data} />
+
+  <!-- Prev / Next navigation -->
+  <nav class="pagination" aria-label="Date navigation">
+    {
+      prev ? (
+        <a class="pag-link pag-prev" href={`/${prev}`}>
+          ← {prev}
+        </a>
+      ) : (
+        <span class="pag-empty" />
+      )
+    }
+    <a class="pag-cal" href="/calendar">Naptár</a>
+    {
+      next ? (
+        <a class="pag-link pag-next" href={`/${next}`}>
+          {next} →
+        </a>
+      ) : (
+        <span class="pag-empty" />
+      )
+    }
+  </nav>
+</Layout>
+
+<style>
+  .pagination {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pag-link,
+  .pag-cal {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition:
+      color 0.15s,
+      border-color 0.15s;
+  }
+
+  .pag-link:hover,
+  .pag-cal:hover {
+    color: var(--red);
+    border-color: var(--red);
+  }
+
+  .pag-empty {
+    flex: 1;
+  }
+
+  .pag-cal {
+    color: var(--ink);
+    border-color: var(--rule);
+  }
+</style>

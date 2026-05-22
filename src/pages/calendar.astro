@@ -1,0 +1,199 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const files = import.meta.glob('../../news/*.json', { eager: true });
+
+const entries = Object.keys(files)
+  .map(path => path.match(/(\d{4}-\d{2}-\d{2})\.json$/)?.[1])
+  .filter(Boolean)
+  .sort()
+  .reverse() as string[];
+
+const byMonth: Record<string, string[]> = {};
+for (const date of entries) {
+  const month = date.slice(0, 7);
+  if (!byMonth[month]) byMonth[month] = [];
+  byMonth[month].push(date);
+}
+
+const months = Object.keys(byMonth).sort().reverse();
+
+function formatMonth(ym: string) {
+  const [y, m] = ym.split('-').map(Number);
+  return new Date(y, m - 1, 1).toLocaleDateString('hu-HU', { month: 'long', year: 'numeric' });
+}
+
+function parseDateParts(iso: string) {
+  const [y, m, d] = iso.split('-').map(Number);
+  const dt = new Date(y, m - 1, d);
+  const dayNum = String(d).padStart(2, '0');
+  const weekday = dt.toLocaleDateString('hu-HU', { weekday: 'long' });
+
+  const tmp = new Date(dt.getTime());
+  tmp.setHours(0,0,0,0);
+  tmp.setDate(tmp.getDate() + 3 - ((tmp.getDay() + 6) % 7));
+  const week1 = new Date(tmp.getFullYear(), 0, 4);
+  const weekNum = 1 + Math.round(((tmp.getTime() - week1.getTime()) / 86400000 - 3 + ((week1.getDay() + 6) % 7)) / 7);
+
+  return { dayNum, weekday, weekNum };
+}
+---
+
+<Layout title="Naptár" description="Összes hírösszefoglaló böngészése.">
+  <div class="cal-header">
+    <h1 class="cal-title">Naptár</h1>
+    <span class="cal-count">{entries.length} nap</span>
+  </div>
+
+  {entries.length === 0 && (
+    <p class="empty">Még nincs bejegyzés. Az első éjfél után jelenik meg.</p>
+  )}
+
+  {months.map(month => {
+    const datesInMonth = byMonth[month];
+    return (
+      <section class="month-group">
+        <h2 class="month-heading">{formatMonth(month)}</h2>
+        <ul class="date-list">
+          {datesInMonth.map(date => {
+            const p = parseDateParts(date);
+            return (
+              <li>
+                <a class="date-row" href={`/${date}`}>
+                  <span class="date-row-num">{p.dayNum}</span>
+                  <span class="date-row-body">
+                    <span class="date-row-weekday">{p.weekday}</span>
+                    <span class="date-row-week">hét {p.weekNum}</span>
+                  </span>
+                  <span class="date-row-arrow">→</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    );
+  })}
+</Layout>
+
+<style>
+  /* ── Header ──────────────────────────────────────── */
+  .cal-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: var(--line-h) 0 0;
+    margin-bottom: calc(var(--line-h) * 2);
+    line-height: var(--line-h);
+  }
+
+  .cal-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: var(--line-h);
+    color: var(--ink);
+  }
+
+  .cal-count {
+    font-family: "Patrick Hand", cursive;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: var(--paper);
+    background: var(--ink-soft);
+    padding: 0 0.45em;
+    border-radius: 2px;
+    line-height: calc(var(--line-h) * 0.6);
+    margin-top: calc(var(--line-h) * 0.2);
+    margin-bottom: calc(var(--line-h) * 0.2);
+  }
+
+  /* ── Month group ─────────────────────────────────── */
+  .month-group {
+    margin-bottom: calc(var(--line-h) * 2);
+    padding-left: 1rem;
+  }
+
+  .month-heading {
+    font-family: "Patrick Hand", cursive;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    line-height: var(--line-h);
+    margin-bottom: 0;
+  }
+
+  /* ── Date rows ───────────────────────────────────── */
+  .date-list {
+    list-style: none;
+  }
+
+  .date-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: 0.5rem;
+    line-height: var(--line-h);
+    text-decoration: none;
+    color: var(--ink);
+    transition: color 0.12s;
+  }
+
+  .date-row:hover {
+    color: var(--red);
+  }
+
+  .date-row-num {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: var(--line-h);
+    color: inherit;
+  }
+
+  .date-row-body {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    line-height: var(--line-h);
+  }
+
+  .date-row-weekday {
+    font-family: "Patrick Hand", cursive;
+    font-size: 1.1rem;
+    line-height: var(--line-h);
+  }
+
+  .date-row-week {
+    font-family: "Patrick Hand", cursive;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--pen);
+    padding: 0 0.45em;
+    border-radius: 2px;
+    line-height: calc(var(--line-h) * 0.6);
+    margin-top: calc(var(--line-h) * 0.2);
+    margin-bottom: calc(var(--line-h) * 0.2);
+  }
+
+  .date-row-arrow {
+    font-family: "Patrick Hand", cursive;
+    font-size: 1rem;
+    line-height: var(--line-h);
+    color: var(--ink-soft);
+    opacity: 0;
+    transition: opacity 0.12s;
+  }
+
+  .date-row:hover .date-row-arrow { opacity: 1; }
+
+  .empty {
+    font-family: "Patrick Hand", cursive;
+    font-size: 1.1rem;
+    line-height: var(--line-h);
+    color: var(--ink-soft);
+    padding: calc(var(--line-h) * 2) 0;
+  }
+</style>
