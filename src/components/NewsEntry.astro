@@ -24,6 +24,22 @@ export interface Props {
 
 const { data, linkDate = false } = Astro.props;
 
+const OUTLET_COLORS: Record<string, { bg: string; fg: string }> = {
+  BBC: { bg: "#000", fg: "#fff" },
+  AP: { bg: "#FE332F", fg: "#fff" },
+  Reuters: { bg: "#D64000", fg: "#fff" },
+  "Al Jazeera": { bg: "#FA9001", fg: "#fff" },
+  Telex: { bg: "#113356", fg: "#fff" },
+  "444": { bg: "#FFF671", fg: "#1B1B1B" },
+  HVG: { bg: "#F26522", fg: "#fff" },
+  "24.hu": { bg: "#FB4743", fg: "#fff" },
+};
+
+function outletStyle(name: string) {
+  const c = OUTLET_COLORS[name];
+  return c ? `--chip-color:${c.bg};--chip-fg:${c.fg}` : "";
+}
+
 function parseParts(iso: string) {
   const [y, m, d] = iso.split("-").map(Number);
   const dt = new Date(y, m - 1, d);
@@ -87,9 +103,19 @@ const parts = parseParts(data.date);
               <span class="keyword">{item.keyword}</span>
               <span class="news-title-row">
                 <span class="news-title">{item.short_title ?? item.title}</span>
-                {item.urls?.map((u) => (
-                  <a class="outlet-chip" href={u.url} target="_blank" rel="noopener noreferrer">{u.name}</a>
-                ))}
+                <span class="chips">
+                  {item.urls?.map((u) => (
+                    <a
+                      class="outlet-chip"
+                      style={outletStyle(u.name)}
+                      href={u.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {u.name}
+                    </a>
+                  ))}
+                </span>
               </span>
             </li>
           ))}
@@ -108,9 +134,19 @@ const parts = parseParts(data.date);
               <span class="keyword">{item.keyword}</span>
               <span class="news-title-row">
                 <span class="news-title">{item.short_title ?? item.title}</span>
-                {item.urls?.map((u) => (
-                  <a class="outlet-chip" href={u.url} target="_blank" rel="noopener noreferrer">{u.name}</a>
-                ))}
+                <span class="chips">
+                  {item.urls?.map((u) => (
+                    <a
+                      class="outlet-chip"
+                      style={outletStyle(u.name)}
+                      href={u.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {u.name}
+                    </a>
+                  ))}
+                </span>
               </span>
             </li>
           ))}
@@ -285,8 +321,8 @@ const parts = parseParts(data.date);
   .news-title-row {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.35rem;
+    align-items: center;
+    gap: 0;
     line-height: var(--line-h);
   }
 
@@ -297,27 +333,43 @@ const parts = parseParts(data.date);
     color: var(--pen);
   }
 
+  .chips {
+    display: inline-flex;
+    align-items: center;
+    height: calc(var(--line-h));
+    gap: 0.3rem;
+    padding-left: 0.5rem;
+  }
+
   .outlet-chip {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--pen);
-    background: transparent;
-    border: 1px solid var(--pen);
-    border-radius: 2px;
-    padding: 0 0.35em;
+    font-size: 0.5rem;
+    font-weight: 500;
+    height: calc(var(--line-h) * 0.65);
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.8em;
     text-decoration: none;
+    text-transform: uppercase;
     white-space: nowrap;
-    line-height: calc(var(--line-h) * 0.65);
-    align-self: center;
-    transition: background 0.12s, color 0.12s;
+    border-radius: 100px;
+    background: color-mix(
+      in srgb,
+      var(--chip-color, var(--ink)) 80%,
+      transparent
+    );
+    color: var(--chip-fg, #fff);
+    border: none;
+    transition: background 0.15s;
   }
 
   .outlet-chip:hover {
-    background: var(--pen);
-    color: var(--paper);
+    background: var(--chip-color, var(--ink));
+  }
+
+  .outlet-chip:hover {
+    background: var(--chip-color, var(--ink));
+    color: var(--chip-fg, var(--paper));
   }
 
   @media (max-width: 600px) {
@@ -372,6 +424,10 @@ const parts = parseParts(data.date);
     .news-title {
       display: block;
       line-height: var(--line-h);
+    }
+
+    .chips {
+      padding-left: 0;
     }
   }
 </style>

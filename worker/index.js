@@ -105,6 +105,7 @@ Rules:
 - Order items by importance descending (most significant story first)
 - If the same event is covered by multiple sources, merge them into one item: use the title/short_title from the primary or most authoritative source, and include ALL source URLs in the urls array (each with its source name and URL)
 - When an event has both a main/breaking article and follow-up or reaction articles, prefer the original breaking article as the primary source — not the follow-up
+- Each outlet should appear at most once per news item — if the same outlet published multiple articles on the same story, pick the most relevant one
 - For each item provide a SHORT keyword (1–4 words, can be in Hungarian for Hungarian news) that acts as a category label — e.g. "US", "Ukraine", "MOL", "Kegyelmi botrány", "Ebola"
 - Keep the original title language (English for world, Hungarian for Hungarian news)
 - Write a short_title: a shortened, neutral version of the title in max 8 words, in the same language as the original
