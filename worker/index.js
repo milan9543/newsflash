@@ -10,9 +10,9 @@
 
 const NEWS_SOURCES = {
   world: [
-    { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
+    { name: "BBC", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
     {
-      name: "AP News",
+      name: "AP",
       url: "https://news.google.com/rss/search?q=site:apnews.com&hl=en-US&gl=US&ceid=US:en",
     },
     {
@@ -102,10 +102,11 @@ From the HUNGARY articles below, select the 1–5 most important Hungarian stori
 
 Rules:
 - Prefer hard news over opinion/analysis
-- Avoid duplicates (same event covered by multiple sources → pick the best URL)
+- Order items by importance descending (most significant story first)
+- If the same event is covered by multiple sources, merge them into one item: use the title/short_title from the primary or most authoritative source, and include ALL source URLs in the urls array (each with its source name and URL)
+- When an event has both a main/breaking article and follow-up or reaction articles, prefer the original breaking article as the primary source — not the follow-up
 - For each item provide a SHORT keyword (1–4 words, can be in Hungarian for Hungarian news) that acts as a category label — e.g. "US", "Ukraine", "MOL", "Kegyelmi botrány", "Ebola"
 - Keep the original title language (English for world, Hungarian for Hungarian news)
-- The URL must be the direct article link
 - Write a short_title: a shortened, neutral version of the title in max 8 words, in the same language as the original
 - All string values must be valid JSON: escape double quotes as \\", backslashes as \\\\, and avoid raw newlines or control characters inside strings
 
@@ -132,10 +133,24 @@ const DIGEST_TOOL = {
           properties: {
             keyword: { type: "string" },
             title: { type: "string" },
-            short_title: { type: "string", description: "Shortened title, max 8 words, neutral and factual" },
-            url: { type: "string" },
+            short_title: {
+              type: "string",
+              description: "Shortened title, max 8 words, neutral and factual",
+            },
+            urls: {
+              type: "array",
+              description: "One entry per source covering this story",
+              items: {
+                type: "object",
+                properties: {
+                  name: { type: "string", description: "News outlet name" },
+                  url: { type: "string", description: "Direct article URL" },
+                },
+                required: ["name", "url"],
+              },
+            },
           },
-          required: ["keyword", "title", "short_title", "url"],
+          required: ["keyword", "title", "short_title", "urls"],
         },
       },
       hungary: {
@@ -145,10 +160,24 @@ const DIGEST_TOOL = {
           properties: {
             keyword: { type: "string" },
             title: { type: "string" },
-            short_title: { type: "string", description: "Shortened title, max 8 words, neutral and factual" },
-            url: { type: "string" },
+            short_title: {
+              type: "string",
+              description: "Shortened title, max 8 words, neutral and factual",
+            },
+            urls: {
+              type: "array",
+              description: "One entry per source covering this story",
+              items: {
+                type: "object",
+                properties: {
+                  name: { type: "string", description: "News outlet name" },
+                  url: { type: "string", description: "Direct article URL" },
+                },
+                required: ["name", "url"],
+              },
+            },
           },
-          required: ["keyword", "title", "short_title", "url"],
+          required: ["keyword", "title", "short_title", "urls"],
         },
       },
     },
@@ -166,7 +195,7 @@ async function callAnthropic(prompt, apiKey) {
     },
     body: JSON.stringify({
       model: "claude-sonnet-4-6",
-      max_tokens: 4096,
+      max_tokens: 8192,
       tools: [DIGEST_TOOL],
       tool_choice: { type: "tool", name: "save_digest" },
       messages: [{ role: "user", content: prompt }],
@@ -177,6 +206,9 @@ async function callAnthropic(prompt, apiKey) {
     throw new Error(`Anthropic API error ${res.status}: ${err}`);
   }
   const data = await res.json();
+  if (data.stop_reason === "max_tokens") {
+    console.error("[anthropic] Response truncated — hit max_tokens limit");
+  }
   const toolUse = data.content.find((b) => b.type === "tool_use");
   if (!toolUse) throw new Error("No tool_use block in Anthropic response");
   return toolUse.input;
@@ -256,16 +288,10 @@ export default {
       `[worker] Got ${payload.world?.length} world / ${payload.hungary?.length} hungary items from Claude`,
     );
 
-    // DEV: return Anthropic response without committing to GitHub
-    if (env.DEV_MODE) {
-      return new Response(JSON.stringify(payload, null, 2), {
-        headers: { "Content-Type": "application/json" },
-      });
-    }
-
     // Commit to GitHub
     await commitToGitHub(date, payload, env);
     console.log(`[worker] Done for ${date}.`);
+    return payload;
   },
 
   // Optional: HTTP handler for manual triggering during development
@@ -273,8 +299,10 @@ export default {
     if (request.method !== "POST") {
       return new Response("Send POST to trigger manually.", { status: 405 });
     }
-    const result = await this.scheduled(null, env, null);
-    if (result instanceof Response) return result;
-    return new Response("Triggered successfully.", { status: 200 });
+    const payload = await this.scheduled(null, env, null);
+    return new Response(JSON.stringify(payload, null, 2), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   },
 };

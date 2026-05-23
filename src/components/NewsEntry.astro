@@ -1,9 +1,14 @@
 ---
+export interface NewsUrl {
+  name: string;
+  url: string;
+}
+
 export interface NewsItem {
   keyword: string;
   title: string;
   short_title?: string;
-  url: string;
+  urls: NewsUrl[];
 }
 
 export interface DayData {
@@ -80,14 +85,12 @@ const parts = parseParts(data.date);
           {data.hungary.map((item) => (
             <li class="news-item">
               <span class="keyword">{item.keyword}</span>
-              <a
-                class="news-link"
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.short_title ?? item.title}
-              </a>
+              <span class="news-title-row">
+                <span class="news-title">{item.short_title ?? item.title}</span>
+                {item.urls?.map((u) => (
+                  <a class="outlet-chip" href={u.url} target="_blank" rel="noopener noreferrer">{u.name}</a>
+                ))}
+              </span>
             </li>
           ))}
         </ul>
@@ -103,14 +106,12 @@ const parts = parseParts(data.date);
           {data.world.map((item) => (
             <li class="news-item">
               <span class="keyword">{item.keyword}</span>
-              <a
-                class="news-link"
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.short_title ?? item.title}
-              </a>
+              <span class="news-title-row">
+                <span class="news-title">{item.short_title ?? item.title}</span>
+                {item.urls?.map((u) => (
+                  <a class="outlet-chip" href={u.url} target="_blank" rel="noopener noreferrer">{u.name}</a>
+                ))}
+              </span>
             </li>
           ))}
         </ul>
@@ -281,20 +282,42 @@ const parts = parseParts(data.date);
     background: var(--ink);
   }
 
-  .news-link {
+  .news-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem;
+    line-height: var(--line-h);
+  }
+
+  .news-title {
     font-family: "Patrick Hand", cursive;
     font-size: 1.1rem;
     line-height: var(--line-h);
     color: var(--pen);
-    text-decoration: none;
-    transition:
-      color 0.15s,
-      border-color 0.15s;
   }
 
-  .news-link:hover {
-    color: var(--red);
-    border-color: var(--red);
+  .outlet-chip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pen);
+    background: transparent;
+    border: 1px solid var(--pen);
+    border-radius: 2px;
+    padding: 0 0.35em;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: calc(var(--line-h) * 0.65);
+    align-self: center;
+    transition: background 0.12s, color 0.12s;
+  }
+
+  .outlet-chip:hover {
+    background: var(--pen);
+    color: var(--paper);
   }
 
   @media (max-width: 600px) {
@@ -332,21 +355,21 @@ const parts = parseParts(data.date);
     .news-item {
       display: block;
     }
-    .news-link {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-    }
 
     .keyword {
       display: block;
       width: fit-content;
-      /* full line, no fractional margins */
       line-height: var(--line-h);
       margin-top: 0;
       margin-bottom: 0;
     }
 
-    .news-link {
+    .news-title-row {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .news-title {
       display: block;
       line-height: var(--line-h);
     }
