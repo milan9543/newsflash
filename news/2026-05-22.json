@@ -1,0 +1,67 @@
+{
+  "date": "2026-05-22",
+  "world": [
+    {
+      "keyword": "Russia-Ukraine",
+      "title": "Russia's Putin vows retaliation after accusing Ukraine of hitting student dormitory",
+      "short_title": "Putin vows retaliation after dormitory strike",
+      "url": "https://www.bbc.com/news/articles/c5y74lwx395o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "keyword": "Tulsi Gabbard",
+      "title": "Tulsi Gabbard resigns as Trump's top US intelligence official",
+      "short_title": "Gabbard resigns as US intelligence director",
+      "url": "https://www.aljazeera.com/news/2026/5/22/tulsi-gabbard-resigns-as-trumps-top-us-intelligence-official?traffic_source=rss"
+    },
+    {
+      "keyword": "Ebola",
+      "title": "Ebola risk raised to 'very high' in DR Congo",
+      "short_title": "Ebola risk raised to 'very high' in DRC",
+      "url": "https://www.bbc.com/news/articles/cr7p30m1dn1o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "keyword": "Gaza flotilla",
+      "title": "Gaza flotilla activists allege abuse, sexual assault in Israeli detention",
+      "short_title": "Flotilla activists allege abuse in Israeli detention",
+      "url": "https://www.aljazeera.com/news/2026/5/22/gaza-flotilla-activists-allege-abuse-sexual-assault-in-israeli-detention?traffic_source=rss"
+    },
+    {
+      "keyword": "Slovenia",
+      "title": "Slovenia's parliament approves right-wing Janez Jansa as prime minister",
+      "short_title": "Jansa approved as Slovenian PM for fourth time",
+      "url": "https://www.aljazeera.com/news/2026/5/22/slovenias-parliament-approves-right-wing-janez-jansa-as-prime-minister?traffic_source=rss"
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "ICC-kilépés",
+      "title": "A kormány visszavonja Magyarország kilépési szándékát a Nemzetközi Büntetőbíróságból",
+      "short_title": "Kormány visszavonja ICC-kilépési szándékát",
+      "url": "https://444.hu/2026/05/22/hivatalos-a-kormany-visszavonja-magyarorszag-kilepesi-szandekat-a-nemzetkozi-buntetobirosagbol?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+    },
+    {
+      "keyword": "MOL–NIS",
+      "title": "A Mol további két hetet kapott a NIS ügyében zajló tárgyalások lezárására",
+      "short_title": "Mol két hetes haladékot kapott NIS-tárgyalásra",
+      "url": "https://telex.hu/gazdasag/2026/05/22/nis-mol-gazprom-targyalas-eladas-hatarido"
+    },
+    {
+      "keyword": "Kegyelmi botrány",
+      "title": "Novák egyenes vonallal húzta át K. Endre elutasító határozatát – ezek a kegyelmi ügyben kiadott dokumentumok legérdekesebb részei",
+      "short_title": "Novák áthúzta az elutasító határozatot a kegyelmi ügyben",
+      "url": "https://telex.hu/belfold/2026/05/22/novak-katalin-athuzta-az-elutasito-hatarozatot-mutatjuk-a-kegyelmi-ugy-legfontosabb-dokumentumait"
+    },
+    {
+      "keyword": "Moody's",
+      "title": "A választás után sem módosított Magyarország adósságbesorolásán a Moody's",
+      "short_title": "Moody's nem változtatott Magyarország besorolásán",
+      "url": "https://telex.hu/gazdasag/2026/05/22/moodys-besorolas-magyarorszag-kormanyvaltas"
+    },
+    {
+      "keyword": "EU-források",
+      "title": "Euronews: Magyar Péter két kérdésben ellenáll Brüsszelnek az uniós források felszabadításáról szóló tárgyalásokon",
+      "short_title": "Magyar Péter két kérdésben ellenáll Brüsszelnek",
+      "url": "https://hvg.hu/gazdasag/20260522_europa-bizottsag-unios-forrasok-felszabaditasa-targyalas-magyar-peter-ellenallas"
+    }
+  ]
+}
