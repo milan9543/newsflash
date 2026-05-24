@@ -42,7 +42,7 @@ function outletStyle(name: string) {
 ---
 
 <article
-  class="font-hand max-w-4xl flex flex-col justify-center items-center p-8 gap-4"
+  class="font-hand max-w-4xl flex flex-col justify-center items-center p-2 md:p-8 gap-4 w-full"
 >
   <div class="text-4xl font-thin text-center text-ink">Hírnapló</div>
   <div
@@ -51,11 +51,11 @@ function outletStyle(name: string) {
     {new Date(data.date).toLocaleDateString("hu-HU")}
   </div>
 
-  <div class="flex flex-row gap-2">
+  <div class="flex flex-col md:flex-row gap-2 w-full">
     <!-- ── Sections ── -->
     {
       data.hungary?.length > 0 && (
-        <section class="text-red flex flex-col items-start mb-4 flex-1 p-4">
+        <section class="text-red flex flex-col items-start mb-4 flex-1 p-2 md:p-4">
           <h2 class="underline uppercase mb-4 text-2xl text-center w-full">
             Magyarország
           </h2>
@@ -81,7 +81,7 @@ function outletStyle(name: string) {
                           href={u.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="text-ink underline decoration-red hover:decoration-pen"
+                          class="text-ink underline decoration-red hover:decoration-pen opacity-50 hover:opacity-100 transition-opacity duration-150"
                         >
                           {u.name}
                         </a>
@@ -95,10 +95,11 @@ function outletStyle(name: string) {
         </section>
       )
     }
-    <div class="w-[2px] self-stretch bg-ink rounded-sm"></div>
+    <div class="md:w-[2px] md:self-stretch h-[2px] w-full bg-ink rounded-sm">
+    </div>
     {
       data.world?.length > 0 && (
-        <section class="text-pen flex flex-col items-start mb-4 flex-1 p-4">
+        <section class="text-pen flex flex-col items-start mb-4 flex-1 p-2 md:p-4">
           <h2 class="underline uppercase mb-4 text-2xl text-center w-full">
             Világ
           </h2>
@@ -123,7 +124,7 @@ function outletStyle(name: string) {
                           href={u.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="text-ink underline decoration-pen hover:decoration-red"
+                          class="text-ink underline decoration-pen hover:decoration-red opacity-50 hover:opacity-100 transition-opacity duration-150"
                         >
                           {u.name}
                         </a>
