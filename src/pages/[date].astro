@@ -60,8 +60,8 @@ const next = idx < allDates.length - 1 ? allDates[idx + 1] : null;
   .pagination {
     margin-top: 3.5rem;
     padding-top: 1.25rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 1rem;
   }
@@ -87,8 +87,16 @@ const next = idx < allDates.length - 1 ? allDates[idx + 1] : null;
     border-color: var(--red);
   }
 
+  .pag-prev {
+    justify-self: start;
+  }
+
+  .pag-next {
+    justify-self: end;
+  }
+
   .pag-empty {
-    flex: 1;
+    display: block;
   }
 
   .pag-cal {
