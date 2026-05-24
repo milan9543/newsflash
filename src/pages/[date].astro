@@ -17,7 +17,6 @@ export async function getStaticPaths() {
 const { data } = Astro.props as { data: any };
 const { date } = Astro.params;
 
-// Prev / next navigation
 const allFiles = import.meta.glob("../../news/*.json", { eager: true });
 const allDates = Object.keys(allFiles)
   .map((p) => p.match(/(\d{4}-\d{2}-\d{2})\.json$/)?.[1])
@@ -32,75 +31,39 @@ const next = idx < allDates.length - 1 ? allDates[idx + 1] : null;
 <Layout title={date} description={`News digest for ${date}.`}>
   <NewsEntry data={data} />
 
-  <!-- Prev / Next navigation -->
-  <nav class="pagination" aria-label="Date navigation">
+  <nav
+    class="font-hand mt-8 flex flex-row items-center justify-center gap-4 max-w-4xl w-full px-8"
+    aria-label="Date navigation"
+  >
     {
       prev ? (
-        <a class="pag-link pag-prev" href={`/${prev}`}>
+        <a
+          href={`/${prev}`}
+          class="text-red border-2 border-red rounded-[3px] px-3 py-1 text-base hover:bg-red hover:text-paper transition-colors duration-150"
+        >
           ← {prev}
         </a>
       ) : (
-        <span class="pag-empty" />
+        <span class="w-[128px]" />
       )
     }
-    <a class="pag-cal" href="/calendar">Naptár</a>
+    <a
+      href="/calendar"
+      class="text-ink border-2 border-ink rounded-[3px] px-3 py-1 text-base hover:bg-ink hover:text-paper transition-colors duration-150"
+    >
+      Naptár
+    </a>
     {
       next ? (
-        <a class="pag-link pag-next" href={`/${next}`}>
+        <a
+          href={`/${next}`}
+          class="text-pen border-2 border-pen rounded-[3px] px-3 py-1 text-base hover:bg-pen hover:text-paper transition-colors duration-150"
+        >
           {next} →
         </a>
       ) : (
-        <span class="pag-empty" />
+        <span class="w-[128px]" />
       )
     }
   </nav>
 </Layout>
-
-<style>
-  .pagination {
-    margin-top: 3.5rem;
-    padding-top: 1.25rem;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .pag-link,
-  .pag-cal {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--ink-soft);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 1px;
-    transition:
-      color 0.15s,
-      border-color 0.15s;
-  }
-
-  .pag-link:hover,
-  .pag-cal:hover {
-    color: var(--red);
-    border-color: var(--red);
-  }
-
-  .pag-prev {
-    justify-self: start;
-  }
-
-  .pag-next {
-    justify-self: end;
-  }
-
-  .pag-empty {
-    display: block;
-  }
-
-  .pag-cal {
-    color: var(--ink);
-    border-color: var(--rule);
-  }
-</style>

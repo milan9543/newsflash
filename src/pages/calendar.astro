@@ -1,199 +1,208 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-const files = import.meta.glob('../../news/*.json', { eager: true });
+const files = import.meta.glob("../../news/*.json", { eager: true });
 
-const entries = Object.keys(files)
-  .map(path => path.match(/(\d{4}-\d{2}-\d{2})\.json$/)?.[1])
-  .filter(Boolean)
-  .sort()
-  .reverse() as string[];
+const articleDates = new Set(
+  Object.keys(files)
+    .map((path) => path.match(/(\d{4}-\d{2}-\d{2})\.json$/)?.[1])
+    .filter(Boolean) as string[],
+);
 
-const byMonth: Record<string, string[]> = {};
-for (const date of entries) {
-  const month = date.slice(0, 7);
-  if (!byMonth[month]) byMonth[month] = [];
-  byMonth[month].push(date);
+const allDates = [...articleDates].sort();
+const earliest = allDates[0];
+const latest = allDates[allDates.length - 1];
+
+const months: { year: number; month: number; key: string }[] = [];
+if (earliest && latest) {
+  const [ey, em] = earliest.split("-").map(Number) as [number, number];
+  const [ly, lm] = latest.split("-").map(Number) as [number, number];
+  let y = ey,
+    m = em;
+  while (y < ly || (y === ly && m <= lm)) {
+    months.push({
+      year: y,
+      month: m,
+      key: `${y}-${String(m).padStart(2, "0")}`,
+    });
+    m++;
+    if (m > 12) {
+      m = 1;
+      y++;
+    }
+  }
+}
+months.reverse();
+
+const DAY_NAMES = ["H", "K", "Sze", "Cs", "P", "Szo", "V"];
+
+function monthLabel(y: number, m: number) {
+  return new Date(y, m - 1, 1).toLocaleDateString("hu-HU", {
+    month: "long",
+    year: "numeric",
+  });
 }
 
-const months = Object.keys(byMonth).sort().reverse();
-
-function formatMonth(ym: string) {
-  const [y, m] = ym.split('-').map(Number);
-  return new Date(y, m - 1, 1).toLocaleDateString('hu-HU', { month: 'long', year: 'numeric' });
+function buildGrid(y: number, m: number): (number | null)[][] {
+  const firstDay = new Date(y, m - 1, 1).getDay();
+  const startOffset = (firstDay + 6) % 7;
+  const daysInMonth = new Date(y, m, 0).getDate();
+  const cells: (number | null)[] = [
+    ...Array(startOffset).fill(null),
+    ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
+  ];
+  while (cells.length % 7 !== 0) cells.push(null);
+  const rows: (number | null)[][] = [];
+  for (let i = 0; i < cells.length; i += 7) rows.push(cells.slice(i, i + 7));
+  return rows;
 }
 
-function parseDateParts(iso: string) {
-  const [y, m, d] = iso.split('-').map(Number);
-  const dt = new Date(y, m - 1, d);
-  const dayNum = String(d).padStart(2, '0');
-  const weekday = dt.toLocaleDateString('hu-HU', { weekday: 'long' });
-
-  const tmp = new Date(dt.getTime());
-  tmp.setHours(0,0,0,0);
-  tmp.setDate(tmp.getDate() + 3 - ((tmp.getDay() + 6) % 7));
-  const week1 = new Date(tmp.getFullYear(), 0, 4);
-  const weekNum = 1 + Math.round(((tmp.getTime() - week1.getTime()) / 86400000 - 3 + ((week1.getDay() + 6) % 7)) / 7);
-
-  return { dayNum, weekday, weekNum };
+function pad(n: number) {
+  return String(n).padStart(2, "0");
 }
+
+const monthKeys = months.map((m) => m.key);
+const monthLabels = months.map(({ year, month }) => monthLabel(year, month));
 ---
 
 <Layout title="Naptár" description="Összes hírösszefoglaló böngészése.">
-  <div class="cal-header">
-    <h1 class="cal-title">Naptár</h1>
-    <span class="cal-count">{entries.length} nap</span>
+  <div
+    class="font-hand flex flex-col items-center gap-6 py-10 w-full max-w-sm px-4"
+  >
+    <h1 class="text-4xl font-thin text-ink">Naptár</h1>
+
+    <!-- Month navigation -->
+    <div class="flex flex-row items-center justify-between w-full gap-2">
+      <button
+        id="prev-month"
+        class="text-red border-2 border-red rounded-[3px] px-3 py-1 text-base hover:bg-red hover:text-paper transition-colors duration-150 disabled:opacity-30 disabled:pointer-events-none"
+        >←</button
+      >
+      <span
+        id="month-label"
+        class="text-xl text-pen border-2 border-pen rounded-[3px] px-2 py-1 flex-1 text-center"
+      ></span>
+      <button
+        id="next-month"
+        class="text-pen border-2 border-pen rounded-[3px] px-3 py-1 text-base hover:bg-pen hover:text-paper transition-colors duration-150 disabled:opacity-30 disabled:pointer-events-none"
+        >→</button
+      >
+    </div>
+
+    <!-- Calendar grids (one per month, hidden/shown by JS) -->
+    {
+      months.map(({ year, month, key }) => {
+        const grid = buildGrid(year, month);
+        return (
+          <div class="cal-month w-full hidden" data-month={key}>
+            <table class="w-full border-collapse">
+              <thead>
+                <tr>
+                  {DAY_NAMES.map((d) => (
+                    <th class="text-center text-sm text-ink-soft font-normal pb-2 w-[14.28%]">
+                      {d}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {grid.map((row) => (
+                  <tr>
+                    {row.map((day) => {
+                      if (!day) return <td class="p-1 text-center" />;
+                      const iso = `${year}-${pad(month)}-${pad(day)}`;
+                      const hasArticle = articleDates.has(iso);
+                      return (
+                        <td class="p-1 text-center">
+                          {hasArticle ? (
+                            <a
+                              href={`/${iso}`}
+                              data-date={iso}
+                              class="cal-day-article relative inline-flex flex-col items-center justify-center w-9 h-9 border-2 border-red rounded-[3px] text-red hover:bg-red hover:text-paper transition-colors duration-150 leading-none"
+                            >
+                              <span class="text-base">{day}</span>
+                              <span class="absolute bottom-[3px] w-1 h-1 rounded-full bg-current" />
+                            </a>
+                          ) : (
+                            <span
+                              data-date={iso}
+                              class="cal-day inline-flex items-center justify-center w-9 h-9 text-ink-soft text-base opacity-40"
+                            >
+                              {day}
+                            </span>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      })
+    }
   </div>
-
-  {entries.length === 0 && (
-    <p class="empty">Még nincs bejegyzés. Az első éjfél után jelenik meg.</p>
-  )}
-
-  {months.map(month => {
-    const datesInMonth = byMonth[month];
-    return (
-      <section class="month-group">
-        <h2 class="month-heading">{formatMonth(month)}</h2>
-        <ul class="date-list">
-          {datesInMonth.map(date => {
-            const p = parseDateParts(date);
-            return (
-              <li>
-                <a class="date-row" href={`/${date}`}>
-                  <span class="date-row-num">{p.dayNum}</span>
-                  <span class="date-row-body">
-                    <span class="date-row-weekday">{p.weekday}</span>
-                    <span class="date-row-week">hét {p.weekNum}</span>
-                  </span>
-                  <span class="date-row-arrow">→</span>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    );
-  })}
 </Layout>
 
-<style>
-  /* ── Header ──────────────────────────────────────── */
-  .cal-header {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    padding: var(--line-h) 0 0;
-    margin-bottom: calc(var(--line-h) * 2);
-    line-height: var(--line-h);
+<script is:inline define:vars={{ monthKeys, monthLabels }}>
+  const today = new Date();
+  const todayISO = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  const todayMonth = todayISO.slice(0, 7);
+
+  const params = new URLSearchParams(location.search);
+  let activeKey = params.get("month") || todayMonth;
+  if (!monthKeys.includes(activeKey)) activeKey = monthKeys[0];
+
+  const labelEl = document.getElementById("month-label");
+  const prevBtn = document.getElementById("prev-month");
+  const nextBtn = document.getElementById("next-month");
+
+  function show(key) {
+    document
+      .querySelectorAll(".cal-month")
+      .forEach((el) => el.classList.add("hidden"));
+    const active = document.querySelector(`.cal-month[data-month="${key}"]`);
+    if (active) active.classList.remove("hidden");
+
+    const idx = monthKeys.indexOf(key);
+    labelEl.textContent = monthLabels[idx];
+    prevBtn.disabled = idx >= monthKeys.length - 1;
+    nextBtn.disabled = idx <= 0;
+
+    // Highlight today
+    document.querySelectorAll("[data-date]").forEach((el) => {
+      el.classList.remove("!border-ink", "!text-ink", "ring-2", "ring-ink");
+    });
+    const todayEl = active?.querySelector(`[data-date="${todayISO}"]`);
+    if (todayEl) {
+      todayEl.classList.add(
+        "bg-ink",
+        "!text-paper",
+        "!opacity-100",
+        "!border-ink",
+        "rounded-[3px]",
+      );
+    }
+
+    history.replaceState(null, "", `?month=${key}`);
   }
 
-  .cal-title {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: var(--line-h);
-    color: var(--ink);
-  }
+  prevBtn.addEventListener("click", () => {
+    const idx = monthKeys.indexOf(activeKey);
+    if (idx < monthKeys.length - 1) {
+      activeKey = monthKeys[idx + 1];
+      show(activeKey);
+    }
+  });
 
-  .cal-count {
-    font-family: "Patrick Hand", cursive;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    color: var(--paper);
-    background: var(--ink-soft);
-    padding: 0 0.45em;
-    border-radius: 2px;
-    line-height: calc(var(--line-h) * 0.6);
-    margin-top: calc(var(--line-h) * 0.2);
-    margin-bottom: calc(var(--line-h) * 0.2);
-  }
+  nextBtn.addEventListener("click", () => {
+    const idx = monthKeys.indexOf(activeKey);
+    if (idx > 0) {
+      activeKey = monthKeys[idx - 1];
+      show(activeKey);
+    }
+  });
 
-  /* ── Month group ─────────────────────────────────── */
-  .month-group {
-    margin-bottom: calc(var(--line-h) * 2);
-    padding-left: 1rem;
-  }
-
-  .month-heading {
-    font-family: "Patrick Hand", cursive;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--ink-soft);
-    line-height: var(--line-h);
-    margin-bottom: 0;
-  }
-
-  /* ── Date rows ───────────────────────────────────── */
-  .date-list {
-    list-style: none;
-  }
-
-  .date-row {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: start;
-    gap: 0.5rem;
-    line-height: var(--line-h);
-    text-decoration: none;
-    color: var(--ink);
-    transition: color 0.12s;
-  }
-
-  .date-row:hover {
-    color: var(--red);
-  }
-
-  .date-row-num {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.1rem;
-    font-weight: 900;
-    line-height: var(--line-h);
-    color: inherit;
-  }
-
-  .date-row-body {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    line-height: var(--line-h);
-  }
-
-  .date-row-weekday {
-    font-family: "Patrick Hand", cursive;
-    font-size: 1.1rem;
-    line-height: var(--line-h);
-  }
-
-  .date-row-week {
-    font-family: "Patrick Hand", cursive;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: var(--paper);
-    background: var(--pen);
-    padding: 0 0.45em;
-    border-radius: 2px;
-    line-height: calc(var(--line-h) * 0.6);
-    margin-top: calc(var(--line-h) * 0.2);
-    margin-bottom: calc(var(--line-h) * 0.2);
-  }
-
-  .date-row-arrow {
-    font-family: "Patrick Hand", cursive;
-    font-size: 1rem;
-    line-height: var(--line-h);
-    color: var(--ink-soft);
-    opacity: 0;
-    transition: opacity 0.12s;
-  }
-
-  .date-row:hover .date-row-arrow { opacity: 1; }
-
-  .empty {
-    font-family: "Patrick Hand", cursive;
-    font-size: 1.1rem;
-    line-height: var(--line-h);
-    color: var(--ink-soft);
-    padding: calc(var(--line-h) * 2) 0;
-  }
-</style>
+  show(activeKey);
+</script>

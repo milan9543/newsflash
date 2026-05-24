@@ -10,21 +10,21 @@
 
 const NEWS_SOURCES = {
   world: [
-    { name: "BBC", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
+    { name: "bbc.com", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
     {
-      name: "AP",
+      name: "apnews.com",
       url: "https://news.google.com/rss/search?q=site:apnews.com&hl=en-US&gl=US&ceid=US:en",
     },
     {
-      name: "Reuters",
+      name: "reuters.com",
       url: "https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en",
     },
-    { name: "Al Jazeera", url: "https://www.aljazeera.com/xml/rss/all.xml" },
+    { name: "aljazeera.com", url: "https://www.aljazeera.com/xml/rss/all.xml" },
   ],
   hungary: [
-    { name: "Telex", url: "https://telex.hu/rss" },
-    { name: "444", url: "https://444.hu/feed" },
-    { name: "HVG", url: "https://hvg.hu/rss" },
+    { name: "telex.hu", url: "https://telex.hu/rss" },
+    { name: "444.hu", url: "https://444.hu/feed" },
+    { name: "hvg.hu", url: "https://hvg.hu/rss" },
     { name: "24.hu", url: "https://24.hu/feed/" },
   ],
 };
