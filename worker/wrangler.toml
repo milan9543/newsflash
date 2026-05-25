@@ -10,6 +10,7 @@ crons = ["0 23 * * *"]
 #   wrangler secret put ANTHROPIC_API_KEY
 #   wrangler secret put GITHUB_TOKEN
 #   wrangler secret put GITHUB_REPO
+#   wrangler secret put TRIGGER_SECRET
 
 # For local dev, create a .dev.vars file in this directory:
 # ANTHROPIC_API_KEY=sk-ant-...

@@ -103,12 +103,13 @@ From the HUNGARY articles below, select the 1–5 most important Hungarian stori
 Rules:
 - Prefer hard news over opinion/analysis
 - Order items by importance descending (most significant story first)
-- If the same event is covered by multiple sources, merge them into one item: use the title/short_title from the primary or most authoritative source, and include ALL source URLs in the urls array (each with its source name and URL)
+- If the same event is covered by multiple sources, merge them into one item: use the short_title from the primary or most authoritative source, and include ALL source URLs in the urls array (each with its source name and URL)
 - When an event has both a main/breaking article and follow-up or reaction articles, prefer the original breaking article as the primary source — not the follow-up
-- Each outlet should appear at most once per news item — if the same outlet published multiple articles on the same story, pick the most relevant one
+- Each outlet must appear at most once per news item — one URL per outlet, no duplicates
 - For each item provide a SHORT keyword (1–4 words, can be in Hungarian for Hungarian news) that acts as a category label — e.g. "US", "Ukraine", "MOL", "Kegyelmi botrány", "Ebola"
 - Keep the original title language (English for world, Hungarian for Hungarian news)
-- Write a short_title: a shortened, neutral version of the title in max 8 words, in the same language as the original
+- Write a short_title: a shortened, neutral version of the title in max 8 words, in the same language as the original — this is the only title field needed
+- In the urls array, use the exact SOURCE name as the "name" field — do not paraphrase or reformat it
 - All string values must be valid JSON: escape double quotes as \\", backslashes as \\\\, and avoid raw newlines or control characters inside strings
 
 Call the save_digest tool with your selections.
@@ -133,7 +134,6 @@ const DIGEST_TOOL = {
           type: "object",
           properties: {
             keyword: { type: "string" },
-            title: { type: "string" },
             short_title: {
               type: "string",
               description: "Shortened title, max 8 words, neutral and factual",
@@ -144,14 +144,14 @@ const DIGEST_TOOL = {
               items: {
                 type: "object",
                 properties: {
-                  name: { type: "string", description: "News outlet name" },
+                  name: { type: "string", description: "News outlet name — must match the SOURCE name exactly as given in the input" },
                   url: { type: "string", description: "Direct article URL" },
                 },
                 required: ["name", "url"],
               },
             },
           },
-          required: ["keyword", "title", "short_title", "urls"],
+          required: ["keyword", "short_title", "urls"],
         },
       },
       hungary: {
@@ -160,7 +160,6 @@ const DIGEST_TOOL = {
           type: "object",
           properties: {
             keyword: { type: "string" },
-            title: { type: "string" },
             short_title: {
               type: "string",
               description: "Shortened title, max 8 words, neutral and factual",
@@ -171,14 +170,14 @@ const DIGEST_TOOL = {
               items: {
                 type: "object",
                 properties: {
-                  name: { type: "string", description: "News outlet name" },
+                  name: { type: "string", description: "News outlet name — must match the SOURCE name exactly as given in the input" },
                   url: { type: "string", description: "Direct article URL" },
                 },
                 required: ["name", "url"],
               },
             },
           },
-          required: ["keyword", "title", "short_title", "urls"],
+          required: ["keyword", "short_title", "urls"],
         },
       },
     },
@@ -206,13 +205,71 @@ async function callAnthropic(prompt, apiKey) {
     const err = await res.text();
     throw new Error(`Anthropic API error ${res.status}: ${err}`);
   }
-  const data = await res.json();
+  let data;
+  try {
+    data = await res.json();
+  } catch (err) {
+    throw new Error(`Anthropic response is not valid JSON: ${err.message}`);
+  }
+
   if (data.stop_reason === "max_tokens") {
     console.error("[anthropic] Response truncated — hit max_tokens limit");
   }
+
+  if (!Array.isArray(data.content)) {
+    throw new Error(
+      `Unexpected Anthropic response shape: missing content array. Got: ${JSON.stringify(data).slice(0, 300)}`,
+    );
+  }
+
   const toolUse = data.content.find((b) => b.type === "tool_use");
-  if (!toolUse) throw new Error("No tool_use block in Anthropic response");
-  return toolUse.input;
+  if (!toolUse) {
+    const text = data.content.find((b) => b.type === "text")?.text ?? "";
+    throw new Error(
+      `No tool_use block in Anthropic response. stop_reason=${data.stop_reason}. Text: ${text.slice(0, 300)}`,
+    );
+  }
+
+  const input = toolUse.input;
+
+  if (typeof input !== "object" || input === null) {
+    throw new Error(`tool_use.input is not an object: ${JSON.stringify(input)}`);
+  }
+
+  for (const section of ["world", "hungary"]) {
+    if (!Array.isArray(input[section])) {
+      throw new Error(
+        `Malformed digest: "${section}" is not an array. Got: ${JSON.stringify(input[section])}`,
+      );
+    }
+    for (const [i, item] of input[section].entries()) {
+      if (typeof item.short_title !== "string" || !item.short_title) {
+        throw new Error(`${section}[${i}] missing short_title`);
+      }
+      if (typeof item.keyword !== "string" || !item.keyword) {
+        throw new Error(`${section}[${i}] missing keyword`);
+      }
+      if (!Array.isArray(item.urls) || item.urls.length === 0) {
+        throw new Error(`${section}[${i}] missing or empty urls`);
+      }
+      for (const [j, u] of item.urls.entries()) {
+        if (typeof u.name !== "string" || typeof u.url !== "string") {
+          throw new Error(`${section}[${i}].urls[${j}] malformed: ${JSON.stringify(u)}`);
+        }
+      }
+      const seenOutlets = new Set();
+      item.urls = item.urls.filter((u) => {
+        if (seenOutlets.has(u.name)) {
+          console.warn(`[validate] ${section}[${i}] duplicate outlet "${u.name}" — dropping`);
+          return false;
+        }
+        seenOutlets.add(u.name);
+        return true;
+      });
+    }
+  }
+
+  return input;
 }
 
 // ─── GitHub ──────────────────────────────────────────────────────────────────
@@ -295,10 +352,14 @@ export default {
     return payload;
   },
 
-  // Optional: HTTP handler for manual triggering during development
+  // HTTP handler for manual triggering — requires secret token
   async fetch(request, env, _ctx) {
     if (request.method !== "POST") {
-      return new Response("Send POST to trigger manually.", { status: 405 });
+      return new Response("Not found.", { status: 404 });
+    }
+    const token = request.headers.get("x-trigger-secret");
+    if (!env.TRIGGER_SECRET || token !== env.TRIGGER_SECRET) {
+      return new Response("Not found.", { status: 404 });
     }
     const payload = await this.scheduled(null, env, null);
     return new Response(JSON.stringify(payload, null, 2), {
