@@ -2,176 +2,164 @@
   "date": "2026-05-24",
   "world": [
     {
-      "keyword": "Iran deal",
-      "short_title": "Trump: Iran deal largely negotiated",
-      "urls": [
-        {
-          "name": "apnews.com",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSmdwSlZ6TGg2UFdlVVdZblJWbDRFUW9NaHF0RlNidktOVFlrX2NESUl3R2VaaGw2ME9pTE9XWXhJakdhaU5nMWtLbDF1MDc4dF9lbUlqZmNfalkyM200cjItREJaZVIzYVhWbUNKVE9LNmYwTlNSUGU1Ym9CYm1PeEhrVktoVUUzTTl1b0w1OE5xb3R6ZHlIdk41dUJIOHh1dDZPdFhZMUVsckMtb05ZVDF3?oc=5"
-        },
-        {
-          "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/clyp0040x7po?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "name": "aljazeera.com",
-          "url": "https://www.aljazeera.com/news/liveblog/2026/5/24/live-trump-says-iran-deal-not-fully-negotiated-yet?traffic_source=rss"
-        },
-        {
-          "name": "reuters.com",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZm9XX0ZzVmNoTnljTTdPaDRsYTRiMHA0ajVydVFGWjh2cjEteHJ0THhXemlXUmlzMThlUHU3S2RtNXRmRE1oUGlrWUFjdFBwSEpkN18zTTVzZWRzT29LZ3YwekNuVWdSZnpFRVA4cGs1R3laWFMtb2QwTVB6V1htQlpfRXJRQk5YVWg2ek94OWJSNTl6LWFVSThkb0s0QUMwOFY3eUhMMlkxQW1teFE?oc=5"
-        }
-      ]
-    },
-    {
       "keyword": "Ukraine",
-      "short_title": "Russia fires hypersonic missile at Kyiv",
+      "short_title": "Russia threatens Kyiv strikes, warns foreigners to leave",
       "urls": [
         {
-          "name": "apnews.com",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQ2JXX3JSekpLS3g3WUdNMHhscHJNNk53TEx0bUxidktWMndCaFZfbTV1cFZhUGhuVWN2aE1RbEhZR2R0OTJQR2dpY2hKZDJQMUZuMmtoa25IOENLT3R3WkFoRWdGYXRZaVk2VG85MzFpODY1WFNQTHhzazlBVzFIX29aSDRSTWRpTWx6ZmJqNkptT0NFMC0wVnYwWmJ0YkxjRjRwUV8wZw?oc=5"
-        },
-        {
           "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "name": "reuters.com",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRVItRkM4MTdzR3hxWk1SUUI1Um5Xa3BrejhJNnlTdC1UUnZNQ3ZjU00yMVpvUzFvQlI0T2M2Ums0MEk3cWlFRDRfSjZpN0thQkoza1NSRk1zTlkzUDRNRjZZZnRUQnYwei1NanU3clUtamJuRDRfa2I0bDVMcWVPZEN0LUpKV2VxOHJFdHRJY3ZwZkc3Z3dUWVlTa2tuNzJMZkpSS2JyTWozMEVEYk1McGlzYUNJWkdxZGJZMVVWbzRpdjc0aFktMWhqNGtpN21U?oc=5"
+          "url": "https://www.bbc.com/news/articles/c1e22n55zn4o?at_medium=RSS&at_campaign=rss"
         },
         {
           "name": "aljazeera.com",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/24/zelenskyy-speaks-to-al-jazeera-at-site-of-major-russian-attacks-in-kyiv?traffic_source=rss"
+          "url": "https://www.aljazeera.com/news/2026/5/25/russia-warns-foreigners-to-leave-kyiv-as-it-prepares-systematic-strikes?traffic_source=rss"
         }
       ]
     },
     {
-      "keyword": "Turkey",
-      "short_title": "Turkish police storm CHP opposition headquarters",
+      "keyword": "Israel-Lebanon",
+      "short_title": "Netanyahu vows to intensify strikes against Hezbollah",
       "urls": [
         {
           "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/c87qwrqre83o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "name": "apnews.com",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPLW81WmxCTG9iNTVNZlJoZTZQYlpDSmREYVRQTDQzRjlUM1N4dWtNalJ0QlFZQ2dPc2FFdkV5X0hybW5zNFVnT0NRcGlNTUpERWh0Uy1uMlppQjVpdk5NcTU4UnBpYlVUdF9NWVBZblFfbHAwZ3lTRlg5MnhlSkplQnNUalowV0ltSEZrMHZhRXg1bFNn?oc=5"
-        },
-        {
-          "name": "reuters.com",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMnMwZ0FRRTdCSVoxX0t2aXBkaWZneGZLVlJFM2lYb2dJZkV4S3pHLTJUbE1lVWY0UU8waVRVNjA2enN0azhZdGtfRERVUFFXWURjUEpZVFdvRWZseWh2UnRqMmJpQmR3VmNRbXkybG1XQ0hpZ2YxNjktaGN5eGxoNmFfWnFlQ2R6dWotMzI5SGtnQU5ZLWd5MGtyVklLek80ZVhHZmd0QU1XWjVjOUVBeWswZ3VxRG1OOHVCQUJIbw?oc=5"
+          "url": "https://www.bbc.com/news/articles/cewppdk1187o?at_medium=RSS&at_campaign=rss"
         },
         {
           "name": "aljazeera.com",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/24/turkish-police-storm-main-opposition-chps-party-headquarters?traffic_source=rss"
+          "url": "https://www.aljazeera.com/news/2026/5/25/israel-to-intensify-lebanon-offensive-in-bid-to-crush-hezbollah?traffic_source=rss"
         }
       ]
     },
     {
-      "keyword": "Ebola",
-      "short_title": "WHO: Over 900 Ebola cases in DRC",
+      "keyword": "Iran deal",
+      "short_title": "Iran says US deal not imminent amid negotiations",
       "urls": [
         {
-          "name": "reuters.com",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQZkhzNUNKaTBiWF9PZllteTRDa2pobFBXd01ibkExWnFtWHE0YU5lQWJYZlJpZ3ZqYXpVRjZNTGwweUpNNGVIYlIwVjBvRzJ1Ty1peUJhQlVKUUhwSHdGS2pIRTg1cFVINGp6UEp4aTFiZEg0ZjVUYXFYRWhpLU04c3UtcVV2NXJaaloxaHpSbEhFRlJyTENpN21ubmo5bkNDNXlPUGtFam9wWFA1Wm5zTVFSXzQxenhteTNzeVZQOGRqX3dHVnV0NVduQWE1OWp4Zmo0?oc=5"
-        },
-        {
           "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/cy421wgr2mpo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.com/news/articles/cglpp2yk336o?at_medium=RSS&at_campaign=rss"
         },
         {
           "name": "aljazeera.com",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/24/ebola-spreads-in-the-drc-as-authorities-struggle-to-contain-outbreak?traffic_source=rss"
+          "url": "https://www.aljazeera.com/news/2026/5/25/trump-dangles-normalisation-amid-pro-israel-criticism-of-possible-iran-deal?traffic_source=rss"
         }
       ]
     },
     {
-      "keyword": "Pakistan",
-      "short_title": "Pakistan train bombing kills 24",
+      "keyword": "Hajj",
+      "short_title": "Over 1.5 million pilgrims begin Hajj amid tensions",
       "urls": [
         {
-          "name": "reuters.com",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa2p2dFBGZGJLX3hVNUxOQUxCS0Y5MjdhTG1TMGRaakFXSHNJUXVWLVRTSmUwRWZ2SmlNNmNoVkVaNWUwaDd1b0s1S3V5MjJFTlk3d2pXamlfcC1nYUpYVHp6NGFnLUgwdTl4SEdjWkp1MjZ6QXh3YmJvd3VtbVJpOG56RXo4MUpGQ0RUMjI0Q2hoOEo5ZTF3dGhKOHN2d1RBSmlYSVZpV2pRbDZzMDZtU0xIaUVBQV9iZV9HenY5UXNBUV9M?oc=5"
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cwy22jx03ryo?at_medium=RSS&at_campaign=rss"
         },
         {
-          "name": "apnews.com",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMGpKT2JjVUJlaE95OFFaYm9JQTBHeHBkSHhYX1F4M18zZUV0UkhOLWpwY3JMbUJxNU1BUkxMaEZOQWlrNkk2WWVsWGM1a0tXRW1yZDhaSHRacXhRanYtSUhwdXRwN3o5bDdQaktMSVBULTRMQUo2YzJQc1hUcnZSVDZQUy1yX0RrZ0ZjdnFsN3BBRVk?oc=5"
-        },
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/gallery/2026/5/25/over-1-5-million-pilgrims-begin-hajj-amid-regional-tensions?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "China coal mine",
+      "short_title": "Anger grows after China's deadliest coal mine disaster",
+      "urls": [
         {
           "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/cm2pkd58xldo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.com/news/articles/c893543gn20o?at_medium=RSS&at_campaign=rss"
         }
       ]
     }
   ],
   "hungary": [
     {
-      "keyword": "Orbán-família",
-      "short_title": "Orbán unokaöccse 660 millió forintot vett ki cégéből",
+      "keyword": "MÁV Kelenföld",
+      "short_title": "Kigyulladt mozdony megbénította a dunántúli vonatközlekedést",
       "urls": [
         {
           "name": "telex.hu",
-          "url": "https://telex.hu/gazdasag/2026/05/24/orban-viktor-gyozo-david-timolod-kft-egyeb-bevetel-osztalek-eredmenytartalek-kivetel-nyereseg"
+          "url": "https://telex.hu/belfold/2026/05/25/kigyulladt-vonat-mozdoly-kelenfold-vitezy-david"
         },
         {
           "name": "444.hu",
-          "url": "https://444.hu/2026/05/24/nem-nagyon-megy-az-uzlet-az-orban-csalad-egyik-reszenek-valaki-viszont-meszaroslorinci-magassagokban-jar"
-        }
-      ]
-    },
-    {
-      "keyword": "Magyar-kormány",
-      "short_title": "Magyar Péter kormányának 55 új államtitkárát kinevezték",
-      "urls": [
-        {
-          "name": "444.hu",
-          "url": "https://444.hu/2026/05/24/kineveztek-magyar-peter-kormanyanak-55-uj-allamtitkarat-nagy-ervin-es-velkey-gyorgy-laszlo-is-allamtitkar-lett"
-        },
-        {
-          "name": "telex.hu",
-          "url": "https://telex.hu/belfold/2026/05/24/allamtitkarok-miniszteriumok-vegzettseg-eletpalya-kinevezes"
-        }
-      ]
-    },
-    {
-      "keyword": "Kegyelmi botrány",
-      "short_title": "Magyar és Gulyás üzenget egymásnak a kegyelmi ügyben",
-      "urls": [
-        {
-          "name": "telex.hu",
-          "url": "https://telex.hu/belfold/2026/05/24/magyar-peter-gulyas-gergely-balog-zoltan-uzengetes-kegyelmi-ugy"
-        },
-        {
-          "name": "444.hu",
-          "url": "https://444.hu/2026/05/24/gulyas-gergely-a-kegyelmi-ugyrol-attol-hogy-balog-zoltan-helytelenul-jart-el-sosem-fogom-megtagadni-ot"
+          "url": "https://444.hu/2026/05/25/lezartak-kelenfold-vasutallomast-miutan-kigyulladt-egy-villanymozdony?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
         },
         {
           "name": "hvg.hu",
-          "url": "https://hvg.hu/itthon/20260524_egymasnak-uzent-magyar-peter-es-gulyas-gergely-a-kegyelmi-ugyben"
-        }
-      ]
-    },
-    {
-      "keyword": "Ukrajna",
-      "short_title": "Masszív orosz légitámadás érte Kijevet",
-      "urls": [
-        {
-          "name": "444.hu",
-          "url": "https://444.hu/2026/05/24/massziv-orosz-legitamadas-erte-ejjel-kijevet-a-varos-minden-keruletet-bombaztak-halalos-aldozat-is-van"
+          "url": "https://hvg.hu/itthon/20260525_kigyulladt-egy-mozdony-kelenfoldon-legalabb-negy-vonalon-kesnek-a-vonatok-mav-vasut-keses"
         },
         {
-          "name": "telex.hu",
-          "url": "https://telex.hu/kulfold/2026/05/24/az-ukran-kulugyminiszterium-epulete-is-megrongalodott-a-kijev-elleni-orosz-tamadasban"
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/05/25/kelenfold-fidesz-mozdony-tuz-reakcio/"
         }
       ]
     },
     {
-      "keyword": "Cannes",
-      "short_title": "Mungiu filmje nyerte az Arany Pálmát Cannes-ban",
+      "keyword": "Magyar Péter",
+      "short_title": "Magyar Péter élő interjút adott a Telexnek",
       "urls": [
         {
           "name": "telex.hu",
-          "url": "https://telex.hu/karakter/kultura/2026/05/24/cannes-filmfesztival-fodij-cristian-mungiu-fjord-arany-palma"
+          "url": "https://telex.hu/belfold/2026/05/25/magyar-peter-elo-interju-telex-kormany-oligarchak-vagyonosodasi-vizsgalat"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/25/magyar-peter-rogan-antalnak-nagyon-sok-minden-miatt-van-izgulnivaloja?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260525_magyar-peter-elo-interju-telex-balasy-rogan-sulyok-vagyonvisszaszerzes-alkotmanyozas"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/05/25/magyar-peter-miniszterelnok-interju/"
+        }
+      ]
+    },
+    {
+      "keyword": "Román kultuszminiszter",
+      "short_title": "Lemondott Demeter András román kulturális miniszter botrány után",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/05/25/lemondott-roman-kulturalis-miniszter-demeter-andras-istvan-hangfelvetel-kiszivargott-rmdsz-kelemen-hunor"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/25/lemondott-a-roman-kormany-magyar-kultuszminisztere-aki-arrol-beszelt-egy-felvetelen-hogy-veri-a-faszat-a-roman-nemzeti-erdekbe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/vilag/20260525_roman-magyar-viszony-lemond-demeter-andras-kulturalis-miniszter-tragar-szavak-romania-rmdsz"
+        }
+      ]
+    },
+    {
+      "keyword": "Hilarion metropolita",
+      "short_title": "Hilarion metropolitát kábítószer-gyanú miatt tartóztatták le Csehországban",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/05/25/hilarion-metropolita-letartoztatas-csehorszag"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/25/orizetbe-vettek-a-magyarorszagon-ministransfiut-molesztalo-hilarion-metropolitat-csehorszagban-feher-anyagot-tartalmazo-negy-apro-edenyt-talaltak-a-kocsijaban?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260525_hilarion-orizetbevetel-csehorszag-kabitoszer"
+        }
+      ]
+    },
+    {
+      "keyword": "Oroszország",
+      "short_title": "Putyin engedélyezte hadsereg bevetését külföldön élő oroszok védelmére",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/05/25/oroszorszag-vlagyimir-putyin-hadsereg-bevetes-kulfold-orosz-allampolgarok-vedelme"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/25/oroszorszag-bevetheti-a-hadsereget-a-kulfoldon-buntetoeljaras-ala-vont-allampolgarainak-vedelmeben?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
         }
       ]
     }
