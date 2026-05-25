@@ -2,8 +2,7 @@
   "date": "2026-05-24",
   "world": [
     {
-      "keyword": "Irán-deal",
-      "title": "Trump says a deal with Iran and opening of Strait of Hormuz are 'largely negotiated'",
+      "keyword": "Iran deal",
       "short_title": "Trump: Iran deal largely negotiated",
       "urls": [
         {
@@ -25,8 +24,7 @@
       ]
     },
     {
-      "keyword": "Ukrajna",
-      "title": "Russia uses hypersonic Oreshnik missile in mass attack on Kyiv",
+      "keyword": "Ukraine",
       "short_title": "Russia fires hypersonic missile at Kyiv",
       "urls": [
         {
@@ -48,8 +46,7 @@
       ]
     },
     {
-      "keyword": "Törökország",
-      "title": "Turkish riot police storm opposition offices after leaders ousted",
+      "keyword": "Turkey",
       "short_title": "Turkish police storm CHP opposition headquarters",
       "urls": [
         {
@@ -72,7 +69,6 @@
     },
     {
       "keyword": "Ebola",
-      "title": "More than 900 suspected Ebola cases identified in DRC, WHO chief says",
       "short_title": "WHO: Over 900 Ebola cases in DRC",
       "urls": [
         {
@@ -90,8 +86,7 @@
       ]
     },
     {
-      "keyword": "Pakisztán",
-      "title": "At least 24 killed in Pakistan train blast claimed by separatist militants",
+      "keyword": "Pakistan",
       "short_title": "Pakistan train bombing kills 24",
       "urls": [
         {
@@ -112,7 +107,6 @@
   "hungary": [
     {
       "keyword": "Orbán-família",
-      "title": "Csak másfél éve alapították, de már 660 millió forintot tudott kivenni bányacégéből Orbán Viktor unokaöccse",
       "short_title": "Orbán unokaöccse 660 millió forintot vett ki cégéből",
       "urls": [
         {
@@ -127,7 +121,6 @@
     },
     {
       "keyword": "Magyar-kormány",
-      "title": "Kinevezték Magyar Péter kormányának 55 új államtitkárát, Nagy Ervin és Velkey György László is államtitkár lett",
       "short_title": "Magyar Péter kormányának 55 új államtitkárát kinevezték",
       "urls": [
         {
@@ -142,7 +135,6 @@
     },
     {
       "keyword": "Kegyelmi botrány",
-      "title": "Egymásnak üzenget Magyar Péter és Gulyás Gergely a kegyelmi ügyben",
       "short_title": "Magyar és Gulyás üzenget egymásnak a kegyelmi ügyben",
       "urls": [
         {
@@ -161,7 +153,6 @@
     },
     {
       "keyword": "Ukrajna",
-      "title": "Masszív orosz légitámadás érte éjjel Kijevet, a város minden kerületét bombázták, halálos áldozat is van",
       "short_title": "Masszív orosz légitámadás érte Kijevet",
       "urls": [
         {
@@ -176,7 +167,6 @@
     },
     {
       "keyword": "Cannes",
-      "title": "Christian Mungiu filmje kapta az Arany Pálmát az idei Cannes-i Filmfesztiválon",
       "short_title": "Mungiu filmje nyerte az Arany Pálmát Cannes-ban",
       "urls": [
         {

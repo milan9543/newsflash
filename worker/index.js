@@ -106,9 +106,9 @@ Rules:
 - If the same event is covered by multiple sources, merge them into one item: use the short_title from the primary or most authoritative source, and include ALL source URLs in the urls array (each with its source name and URL)
 - When an event has both a main/breaking article and follow-up or reaction articles, prefer the original breaking article as the primary source — not the follow-up
 - Each outlet must appear at most once per news item — one URL per outlet, no duplicates
-- For each item provide a SHORT keyword (1–4 words, can be in Hungarian for Hungarian news) that acts as a category label — e.g. "US", "Ukraine", "MOL", "Kegyelmi botrány", "Ebola"
-- Keep the original title language (English for world, Hungarian for Hungarian news)
-- Write a short_title: a shortened, neutral version of the title in max 8 words, in the same language as the original — this is the only title field needed
+- For each item provide a SHORT keyword (1–4 words) that acts as a category label — world news keywords must be in English (e.g. "US", "Ukraine", "Ebola"), Hungary news keywords must be in Hungarian (e.g. "MOL", "Kegyelmi botrány")
+- World news short_title must always be in English; Hungary news short_title must always be in Hungarian
+- Write a short_title: a shortened, neutral version of the title in max 8 words — this is the only title field needed
 - In the urls array, use the exact SOURCE name as the "name" field — do not paraphrase or reformat it
 - All string values must be valid JSON: escape double quotes as \\", backslashes as \\\\, and avoid raw newlines or control characters inside strings
 
@@ -136,7 +136,7 @@ const DIGEST_TOOL = {
             keyword: { type: "string" },
             short_title: {
               type: "string",
-              description: "Shortened title, max 8 words, neutral and factual",
+              description: "Shortened title in English, max 8 words, neutral and factual",
             },
             urls: {
               type: "array",
@@ -162,7 +162,7 @@ const DIGEST_TOOL = {
             keyword: { type: "string" },
             short_title: {
               type: "string",
-              description: "Shortened title, max 8 words, neutral and factual",
+              description: "Shortened title in Hungarian, max 8 words, neutral and factual",
             },
             urls: {
               type: "array",

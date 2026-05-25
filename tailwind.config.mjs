@@ -18,7 +18,8 @@ export default {
       fontFamily: {
         body: ['"Source Serif 4"', "Georgia", "serif"],
         display: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
-        hand: ['"Patrick Hand"', "cursive"],
+        hand: ['"KGMissKindergarten"', "cursive"],
+        sunshine: ['"KGSummerSunshine"', "cursive"],
         mono: ['"IBM Plex Mono"', "monospace"],
         script: ['"Caveat"', "cursive"],
       },

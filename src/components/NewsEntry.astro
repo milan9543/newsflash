@@ -42,32 +42,48 @@ function outletStyle(name: string) {
 ---
 
 <article
-  class="font-hand max-w-4xl flex flex-col justify-center items-center p-2 md:p-8 gap-4 w-full"
+  class="font-hand max-w-7xl flex flex-col justify-center items-center p-2 md:p-8 gap-4 w-full"
 >
-  <div class="text-4xl font-thin text-center text-ink">Hírnapló</div>
-  <div
-    class="text-xl text-center text-pen border-2 border-pen rounded-[3px] px-2 mb-4"
-  >
-    {new Date(data.date).toLocaleDateString("hu-HU")}
+<div class="relative flex items-center justify-center mb-4">
+    <img src="/images/ribbon.png" alt="" class="h-20 w-auto" />
+    <span
+      class="mb-1 absolute inset-0 flex items-center justify-center text-lg text-ink font-bold"
+    >
+      {new Date(data.date).toLocaleDateString("hu-HU")}
+    </span>
   </div>
 
-  <div class="flex flex-col md:flex-row gap-2 w-full">
+  <div class="flex flex-col md:flex-row md:items-stretch gap-2 w-full">
     <!-- ── Sections ── -->
     {
       data.hungary?.length > 0 && (
         <section class="text-red flex flex-col items-start mb-4 flex-1 p-2 md:p-4">
-          <h2 class="underline uppercase mb-4 text-2xl text-center w-full">
-            Magyarország
+          <h2 class="underline uppercase mb-8 text-2xl text-center w-full">
+            <span class="relative inline-block underline">
+              <img
+                src="/images/flag_hu.png"
+                alt="HU"
+                class="absolute right-full top-1/2 -translate-y-1/2 mr-2 h-10 w-auto"
+              />
+              Magyarország
+            </span>
           </h2>
           <ul class="flex flex-col gap-4">
             {data.hungary.map((item, index) => (
               <li class="flex flex-row gap-2 font-bold items-start justify-start">
                 <div class="flex flex-row gap-2 items-center">
-                  <div class="border-2 border-red size-8 aspect-square rounded-full flex items-center justify-center">
-                    {index + 1}.
+                  <div class="relative size-12">
+                    <img
+                      src={`/images/circle_red/red_${index + 1}.png`}
+                      alt=""
+                      class="absolute inset-0 size-12"
+                    />
+                    <span class="absolute inset-0 flex items-center justify-center text-red text-md font-bold">
+                      {index + 1}
+                    </span>
                   </div>
                 </div>
-                <div class="">
+                <div class="pt-2">
                   <span>
                     <p class="text-lg">{item.keyword}</p>
 
@@ -95,23 +111,41 @@ function outletStyle(name: string) {
         </section>
       )
     }
-    <div class="md:w-[2px] md:self-stretch h-[2px] w-full bg-ink rounded-sm">
+    <div class="hidden md:flex md:items-stretch px-2">
+      <div class="w-[2px] self-stretch bg-ink rounded-sm"></div>
+    </div>
+    <div class="md:hidden py-4">
+      <div class="h-[2px] w-full bg-ink rounded-sm"></div>
     </div>
     {
       data.world?.length > 0 && (
         <section class="text-pen flex flex-col items-start mb-4 flex-1 p-2 md:p-4">
-          <h2 class="underline uppercase mb-4 text-2xl text-center w-full">
-            Világ
+          <h2 class="underline uppercase mb-8 text-2xl text-center w-full">
+            <span class="relative inline-block underline">
+              <img
+                src="/images/earth.png"
+                alt=""
+                class="absolute right-full top-1/2 -translate-y-1/2 mr-2 h-10 w-auto"
+              />
+              World
+            </span>
           </h2>
           <ul class="flex flex-col gap-4">
             {data.world.map((item, index) => (
               <li class="flex flex-row gap-2 font-bold items-start justify-start">
                 <div class="flex flex-row gap-2 items-center">
-                  <div class="border-2 border-pen size-8 aspect-square rounded-full flex items-center justify-center">
-                    {index + 1}.
+                  <div class="relative size-12">
+                    <img
+                      src={`/images/circle_blue/blue_${index + 1}.png`}
+                      alt=""
+                      class="absolute inset-0 size-12"
+                    />
+                    <span class="absolute inset-0 flex items-center justify-center text-pen text-md font-bold">
+                      {index + 1}
+                    </span>
                   </div>
                 </div>
-                <div class="">
+                <div class="pt-2">
                   <span>
                     <p class="text-lg">{item.keyword}</p>
                     <p class="text-ink text-lg">
