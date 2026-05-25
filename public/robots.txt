@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hirek.hangnem.cc/sitemap-index.xml

@@ -26,9 +26,30 @@ const allDates = Object.keys(allFiles)
 const idx = allDates.indexOf(date!);
 const prev = idx > 0 ? allDates[idx - 1] : null;
 const next = idx < allDates.length - 1 ? allDates[idx + 1] : null;
+
+const siteUrl = "https://hirek.hangnem.cc";
+const pageUrl = `${siteUrl}/${date}`;
+const [y, m, d] = date!.split("-");
+const dateLabel = new globalThis.Date(Number(y), Number(m) - 1, Number(d)).toLocaleDateString("hu-HU", { year: "numeric", month: "long", day: "numeric" });
+const description = `Napi hírösszefoglaló ${dateLabel} — világ és Magyarország.`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": `Hírnapló – ${dateLabel}`,
+  "description": description,
+  "datePublished": date,
+  "inLanguage": "hu",
+  "url": pageUrl,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hírnapló",
+    "url": siteUrl,
+  },
+};
 ---
 
-<Layout title={date} description={`News digest for ${date}.`}>
+<Layout title={date} description={description} canonicalUrl={pageUrl} jsonLd={jsonLd}>
   <NewsEntry data={data} />
 
   <nav

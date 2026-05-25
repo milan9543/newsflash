@@ -1,0 +1,18 @@
+{
+  "name": "Hírnapló",
+  "short_name": "Hírnapló",
+  "description": "Napi hírösszefoglaló — Világ és Magyarország.",
+  "start_url": "/calendar",
+  "display": "fullscreen",
+  "background_color": "#ede8df",
+  "theme_color": "#ede8df",
+  "lang": "hu",
+  "icons": [
+    {
+      "src": "/images/earth.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

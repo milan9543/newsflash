@@ -2,18 +2,53 @@
 export interface Props {
   title?: string;
   description?: string;
+  canonicalUrl?: string;
+  jsonLd?: Record<string, unknown>;
 }
-const { title = "News Diary", description = "A personal daily news digest." } =
-  Astro.props;
+const {
+  title = "Hírnapló",
+  description = "Napi hírösszefoglaló — világ és Magyarország.",
+  canonicalUrl = Astro.url.href,
+  jsonLd,
+} = Astro.props;
+
+const siteUrl = "https://hirek.hangnem.cc";
+const ogTitle = title === "Hírnapló" ? "Hírnapló" : `${title} — Hírnapló`;
+const ogImage = `${siteUrl}/og.png`;
 ---
 
 <!doctype html>
 <html lang="hu">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/earth.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <title>{title} — Hírnapló</title>
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{ogTitle}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hírnapló" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="hu_HU" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ede8df" />
+
+    {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
     <!-- Typefaces: Playfair Display for display, IBM Plex Mono for keywords -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,12 +74,18 @@ const { title = "News Diary", description = "A personal daily news digest." } =
   </head>
   <body>
     <div>
-      <header class="flex justify-center pt-8 pb-2">
+      <header class="flex flex-col items-center pt-8 pb-2 gap-2">
         <a
           href="/calendar"
           class="text-5xl md:text-8xl font-thin text-center text-ink font-sunshine hover:opacity-80 transition-opacity"
           >Hírnapló</a
         >
+        <button
+          id="pwa-install"
+          hidden
+          onclick="installPwa()"
+          class="font-hand text-sm text-ink-soft border border-ink-soft rounded-[3px] px-3 py-1 hover:border-ink hover:text-ink transition-colors duration-150"
+        >⬇ Telepítés</button>
       </header>
       <main class="flex flex-col items-center">
         <slot />
@@ -53,6 +94,30 @@ const { title = "News Diary", description = "A personal daily news digest." } =
         <slot name="footer" />
       </footer>
     </div>
+
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        document.getElementById('pwa-install')?.removeAttribute('hidden');
+      });
+
+      window.addEventListener('appinstalled', () => {
+        document.getElementById('pwa-install')?.setAttribute('hidden', '');
+        deferredPrompt = null;
+      });
+
+      function installPwa() {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+      }
+    </script>
 
     <style is:global>
       *,
@@ -68,35 +133,17 @@ const { title = "News Diary", description = "A personal daily news digest." } =
         --blue-margin: #b8c4d4;
       }
 
+      html {
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+      }
+
       body {
         background: #ede8df;
         position: relative;
         min-height: 100vh;
       }
 
-      /* grain */
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 9999;
-        opacity: 0.45;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-        mix-blend-mode: multiply;
-      }
-
-      /* paper fibers */
-      body::after {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 9998;
-        opacity: 0.07;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.6' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23f)' opacity='1'/%3E%3C/svg%3E");
-        mix-blend-mode: multiply;
-      }
 
       @media (max-width: 600px) {
         html {
