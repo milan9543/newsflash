@@ -74,18 +74,12 @@ const ogImage = `${siteUrl}/og.png`;
   </head>
   <body>
     <div>
-      <header class="flex flex-col items-center pt-8 pb-2 gap-2">
+      <header class="flex justify-center pt-8 pb-2">
         <a
           href="/calendar"
           class="text-5xl md:text-8xl font-thin text-center text-ink font-sunshine hover:opacity-80 transition-opacity"
           >Hírnapló</a
         >
-        <button
-          id="pwa-install"
-          hidden
-          onclick="installPwa()"
-          class="font-hand text-sm text-ink-soft border border-ink-soft rounded-[3px] px-3 py-1 hover:border-ink hover:text-ink transition-colors duration-150"
-        >⬇ Telepítés</button>
       </header>
       <main class="flex flex-col items-center">
         <slot />
@@ -98,24 +92,6 @@ const ogImage = `${siteUrl}/og.png`;
     <script is:inline>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js');
-      }
-
-      let deferredPrompt;
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        document.getElementById('pwa-install')?.removeAttribute('hidden');
-      });
-
-      window.addEventListener('appinstalled', () => {
-        document.getElementById('pwa-install')?.setAttribute('hidden', '');
-        deferredPrompt = null;
-      });
-
-      function installPwa() {
-        if (!deferredPrompt) return;
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
       }
     </script>
 
