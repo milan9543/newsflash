@@ -1,165 +1,149 @@
 {
-  "date": "2026-05-24",
+  "date": "2026-05-25",
   "world": [
     {
-      "keyword": "Ukraine",
-      "short_title": "Russia threatens Kyiv strikes, warns foreigners to leave",
+      "keyword": "Lebanon",
+      "short_title": "Israel intensifies strikes in Lebanon, kills eleven",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cx211rgngp0o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbmYzaGNfS3diVERUUElLNzRjVGpQMm9BUjE2c1FsVUp1WVpORklZWXptY3o5ck1jMmhJanZ1VDBHZDdmR09EMTJ6aWliR3B2akRHak1jaU5LbXhqWVdLdTYyZjBLVXhZYjR3VGoyamlsb01zQVFlNGJNREFpRTg0T1NpX0dHbEE1VGxTeE5YbEhOSzNQVTJIVWg0cXlnNGxBMmRrUkRrUFdJTm1Kc2lyaEd2ZkhPdF82b2hlaDhWa2dXVTBi"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/26/aftermath-of-deadly-israeli-strikes-in-southern-lebanon?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Russia-Ukraine",
+      "short_title": "Russia threatens more Kyiv strikes, warns foreigners",
       "urls": [
         {
           "name": "bbc.com",
           "url": "https://www.bbc.com/news/articles/c1e22n55zn4o?at_medium=RSS&at_campaign=rss"
         },
         {
-          "name": "aljazeera.com",
-          "url": "https://www.aljazeera.com/news/2026/5/25/russia-warns-foreigners-to-leave-kyiv-as-it-prepares-systematic-strikes?traffic_source=rss"
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQbzZHWFFpY0ZXVkhWb2NPUWpRMlBvM2RoNFlKTFF5YVJPNFI0ZVhvX3VIR096YS1FVXA5NTNINFBjdTJaWG5pQWV0T1A2dmRyaWVKN1FINngzZkJBS0hTQmFXbkFWMl9pbVprUGo3dXNaVUFQMTltV0RPOWJvN2o0Wi1saU5oT0wwRUNhT0IyOXhnUnVLYll6bTRsaEhOX0o4a1FDTnVmMUVROTBlaEJQRFB5dEN4bGs4T1NqRg"
         }
       ]
     },
     {
-      "keyword": "Israel-Lebanon",
-      "short_title": "Netanyahu vows to intensify strikes against Hezbollah",
+      "keyword": "Iran",
+      "short_title": "Iran condemns US strikes as ceasefire violation",
       "urls": [
         {
           "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/cewppdk1187o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.com/news/articles/c4g44yl7q70o?at_medium=RSS&at_campaign=rss"
         },
         {
           "name": "aljazeera.com",
-          "url": "https://www.aljazeera.com/news/2026/5/25/israel-to-intensify-lebanon-offensive-in-bid-to-crush-hezbollah?traffic_source=rss"
+          "url": "https://www.aljazeera.com/video/the-take-2/2026/5/26/aje-onl-irn_mou_av_v3-260526?traffic_source=rss"
         }
       ]
     },
     {
-      "keyword": "Iran deal",
-      "short_title": "Iran says US deal not imminent amid negotiations",
+      "keyword": "Ebola",
+      "short_title": "DR Congo governor warns of Ebola catastrophe",
       "urls": [
         {
           "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/cglpp2yk336o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.com/news/articles/c3022rd2er4o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Belgium",
+      "short_title": "Four killed as minibus collides with train in Belgium",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c70vvd17rg7o?at_medium=RSS&at_campaign=rss"
         },
         {
           "name": "aljazeera.com",
-          "url": "https://www.aljazeera.com/news/2026/5/25/trump-dangles-normalisation-amid-pro-israel-criticism-of-possible-iran-deal?traffic_source=rss"
-        }
-      ]
-    },
-    {
-      "keyword": "Hajj",
-      "short_title": "Over 1.5 million pilgrims begin Hajj amid tensions",
-      "urls": [
-        {
-          "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/cwy22jx03ryo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "name": "aljazeera.com",
-          "url": "https://www.aljazeera.com/gallery/2026/5/25/over-1-5-million-pilgrims-begin-hajj-amid-regional-tensions?traffic_source=rss"
-        }
-      ]
-    },
-    {
-      "keyword": "China coal mine",
-      "short_title": "Anger grows after China's deadliest coal mine disaster",
-      "urls": [
-        {
-          "name": "bbc.com",
-          "url": "https://www.bbc.com/news/articles/c893543gn20o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.aljazeera.com/news/2026/5/26/four-people-killed-after-minibus-collides-with-train-in-belgium?traffic_source=rss"
         }
       ]
     }
   ],
   "hungary": [
     {
-      "keyword": "MÁV Kelenföld",
-      "short_title": "Kigyulladt mozdony megbénította a dunántúli vonatközlekedést",
+      "keyword": "TEK",
+      "short_title": "Magyar Péter felmentette Hajdu János TEK-főigazgatót",
       "urls": [
         {
-          "name": "telex.hu",
-          "url": "https://telex.hu/belfold/2026/05/25/kigyulladt-vonat-mozdoly-kelenfold-vitezy-david"
-        },
-        {
           "name": "444.hu",
-          "url": "https://444.hu/2026/05/25/lezartak-kelenfold-vasutallomast-miutan-kigyulladt-egy-villanymozdony?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+          "url": "https://444.hu/2026/05/26/magyar-peter-kirugja-hajdu-janost-a-tek-foigazgatojat"
         },
         {
           "name": "hvg.hu",
-          "url": "https://hvg.hu/itthon/20260525_kigyulladt-egy-mozdony-kelenfoldon-legalabb-negy-vonalon-kesnek-a-vonatok-mav-vasut-keses"
+          "url": "https://hvg.hu/itthon/20260526_hajdu-janos-tek-felmentes"
+        }
+      ]
+    },
+    {
+      "keyword": "Kórházi fertőzések",
+      "short_title": "Szeptembertől nyilvánosak lesznek kórházi fertőzési adatok",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/26/magyar-kozlony-egeszsegugy-korhazi-fertozesek-nyilvanossag"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/26/magyar-peterek-szeptemberig-nyilvanossagra-akarjak-hozni-a-korhazi-fertozesi-adatokat"
         },
         {
           "name": "24.hu",
-          "url": "https://24.hu/belfold/2026/05/25/kelenfold-fidesz-mozdony-tuz-reakcio/"
+          "url": "https://24.hu/belfold/2026/05/26/korhazi-fertozesek-kormanyhatarozat-magyar-kozkony-hegedus-zsolt-egeszsegugyi-miniszterium/"
         }
       ]
     },
     {
-      "keyword": "Magyar Péter",
-      "short_title": "Magyar Péter élő interjút adott a Telexnek",
+      "keyword": "MTVA-biztos",
+      "short_title": "Kormány költségvetési biztost küld az MTVA-hoz",
       "urls": [
         {
           "name": "telex.hu",
-          "url": "https://telex.hu/belfold/2026/05/25/magyar-peter-elo-interju-telex-kormany-oligarchak-vagyonosodasi-vizsgalat"
+          "url": "https://telex.hu/after/2026/05/26/koltsegvetesi-biztost-kuld-a-tisza-kormany-az-mtva-hoz-es-az-nmhh-hoz"
         },
         {
           "name": "444.hu",
-          "url": "https://444.hu/2026/05/25/magyar-peter-rogan-antalnak-nagyon-sok-minden-miatt-van-izgulnivaloja?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+          "url": "https://444.hu/2026/05/26/koltsegvetesi-biztost-kuld-a-tisza-az-mtva-hoz-es-az-nmhh-hoz"
         },
         {
           "name": "hvg.hu",
-          "url": "https://hvg.hu/itthon/20260525_magyar-peter-elo-interju-telex-balasy-rogan-sulyok-vagyonvisszaszerzes-alkotmanyozas"
+          "url": "https://hvg.hu/itthon/20260526_tarr-zoltan-bejelentette-hogy-koltsegvetesi-biztost-kap-az-mtva-es-az-nmhh"
         },
         {
           "name": "24.hu",
-          "url": "https://24.hu/belfold/2026/05/25/magyar-peter-miniszterelnok-interju/"
+          "url": "https://24.hu/belfold/2026/05/26/koltsegvetesi-biztos-mtva-nmhh/"
         }
       ]
     },
     {
-      "keyword": "Román kultuszminiszter",
-      "short_title": "Lemondott Demeter András román kulturális miniszter botrány után",
+      "keyword": "Magántőkealapok",
+      "short_title": "Kormányhatározat a magántőkealapok soron kívüli felülvizsgálatáról",
       "urls": [
         {
           "name": "telex.hu",
-          "url": "https://telex.hu/kulfold/2026/05/25/lemondott-roman-kulturalis-miniszter-demeter-andras-istvan-hangfelvetel-kiszivargott-rmdsz-kelemen-hunor"
-        },
-        {
-          "name": "444.hu",
-          "url": "https://444.hu/2026/05/25/lemondott-a-roman-kormany-magyar-kultuszminisztere-aki-arrol-beszelt-egy-felvetelen-hogy-veri-a-faszat-a-roman-nemzeti-erdekbe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
-        },
-        {
-          "name": "hvg.hu",
-          "url": "https://hvg.hu/vilag/20260525_roman-magyar-viszony-lemond-demeter-andras-kulturalis-miniszter-tragar-szavak-romania-rmdsz"
+          "url": "https://telex.hu/gazdasag/2026/05/26/kormanyhatarozat-szuletett-a-magantokealapok-teljes-koru-es-soron-kivuli-felulvizsgalatarol"
         }
       ]
     },
     {
-      "keyword": "Hilarion metropolita",
-      "short_title": "Hilarion metropolitát kábítószer-gyanú miatt tartóztatták le Csehországban",
+      "keyword": "MOL",
+      "short_title": "Horvátország pert nyert a Mol ellen",
       "urls": [
         {
           "name": "telex.hu",
-          "url": "https://telex.hu/kulfold/2026/05/25/hilarion-metropolita-letartoztatas-csehorszag"
-        },
-        {
-          "name": "444.hu",
-          "url": "https://444.hu/2026/05/25/orizetbe-vettek-a-magyarorszagon-ministransfiut-molesztalo-hilarion-metropolitat-csehorszagban-feher-anyagot-tartalmazo-negy-apro-edenyt-talaltak-a-kocsijaban?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
-        },
-        {
-          "name": "hvg.hu",
-          "url": "https://hvg.hu/itthon/20260525_hilarion-orizetbevetel-csehorszag-kabitoszer"
-        }
-      ]
-    },
-    {
-      "keyword": "Oroszország",
-      "short_title": "Putyin engedélyezte hadsereg bevetését külföldön élő oroszok védelmére",
-      "urls": [
-        {
-          "name": "telex.hu",
-          "url": "https://telex.hu/kulfold/2026/05/25/oroszorszag-vlagyimir-putyin-hadsereg-bevetes-kulfold-orosz-allampolgarok-vedelme"
-        },
-        {
-          "name": "444.hu",
-          "url": "https://444.hu/2026/05/25/oroszorszag-bevetheti-a-hadsereget-a-kulfoldon-buntetoeljaras-ala-vont-allampolgarainak-vedelmeben?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+          "url": "https://telex.hu/gazdasag/2026/05/26/horvatorszag-mol-per-valasztottbirosagi-eljaras-ina-olajipari-vallalat"
         }
       ]
     }
