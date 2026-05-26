@@ -79,7 +79,7 @@ async function fetchFeed(source) {
         const t = Date.parse(i.pubDate);
         return isNaN(t) || t >= cutoff;
       })
-      .slice(0, 25);
+      .slice(0, 10);
     return items.map((i) => ({ ...i, source: source.name }));
   } catch (err) {
     console.error(`[fetchFeed] ${source.name} failed:`, err.message);
