@@ -1,0 +1,139 @@
+{
+  "date": "2026-05-27",
+  "world": [
+    {
+      "keyword": "Gaza",
+      "short_title": "Israeli strike kills new Hamas military wing head",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cjwppj1yn7go?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Lebanon",
+      "short_title": "Israel orders evacuation of southern Lebanon areas",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cj3pgrpmlklo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/27/israel-orders-evacuation-of-the-lebanese-city-of-tyre-amid-bombardment?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Iran deal",
+      "short_title": "Trump says US not satisfied with Iran deal yet",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c74dy9jw1q9o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/5/27/markets-rally-amid-hopes-of-us-iran-deal?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Ebola",
+      "short_title": "WHO warns DR Congo faces disease-conflict catastrophe",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cdxpdex062yo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Strait of Hormuz",
+      "short_title": "Trump threatens Oman over Strait of Hormuz impasse",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/5/27/trump-appears-to-threaten-oman-with-bombing-over-strait-of-hormuz-impasse?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Diplomata-útlevelek",
+      "short_title": "Fidesz: törvényesen adták ki a diplomata-útleveleket",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260527_haver-sportegyesulet-ner-uzlet-kulfoldi-kap-diplomata-utlevel-szijjarto-peter-kulugy-allamtitkar"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/27/fidesz-velkey-diplomata-utlevelek-kiadasa"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/05/27/fidesz-diplomata-utlevelek-valasz-tisza-kormany/"
+        }
+      ]
+    },
+    {
+      "keyword": "Orosz veszteségek",
+      "short_title": "Brit hírszerzés: félmillió orosz katona halhatott Ukrajnában",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/05/27/gchq-igazgatoja-orosz-es-kinai-fenyegetesek-500-ezer-orosz-halott-ukrajna"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/27/a-brit-hirszerzes-szerint-kozel-felmillio-orosz-katona-halhatott-meg-ukrajnaban?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Gyermekorvos-botrány",
+      "short_title": "Hamis oltási igazolással lebukott orvos újra dolgozhat",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/27/orvoshiany-gyermekorvos-vedooltas"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/27/orvoshiany-miatt-visszaterhet-dolgozni-a-hamis-oltasi-igazolasokkal-gyanusitott-doktorno?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260527_dunavarsany-haziorvos-hamis-oltasi-igazolas-uj-praxis"
+        }
+      ]
+    },
+    {
+      "keyword": "Kormányszóvivők",
+      "short_title": "Kormányszóvivők helyettes államtitkári rangot kaptak",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/27/helyettes-allamtitkari-rangot-kaptak-a-kormanyszovivok?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/05/27/kormanyszovivok-helyettes-allamtitkar-kinevezes/"
+        }
+      ]
+    },
+    {
+      "keyword": "Fidesz-Navracsics",
+      "short_title": "Navracsics két fideszes politikust nevezett meg 2030-ra",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/27/fidesz-orszagos-valasztmany-tisztujitas-gulyas-gergely-cser-palkovics-andras"
+        }
+      ]
+    }
+  ]
+}
