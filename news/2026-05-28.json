@@ -1,0 +1,135 @@
+{
+  "date": "2026-05-28",
+  "world": [
+    {
+      "keyword": "Gaza",
+      "short_title": "Netanyahu orders seizure of 70 percent of Gaza",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/28/netanyahu-orders-israeli-army-to-seize-70-percent-of-gaza?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cn9p40en4ngo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Iran nuclear deal",
+      "short_title": "US and Iran 'very close' to deal, Vance says",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c87qng40wz9o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Israel-Lebanon",
+      "short_title": "Israel strikes Lebanese capital in targeted attack",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cgqpjwdv7xeo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/28/defiant-lebanese-families-refuse-to-leave-tyre-after-homes-bombed?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Taylor Swift attack",
+      "short_title": "Man jailed 15 years for Vienna Taylor Swift plot",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cgrp7y05l9do?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Kenya school fire",
+      "short_title": "16 pupils die in Kenya school fire",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cx21kkxq81po?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Gyermekvédelem",
+      "short_title": "Kátai-Németh egyeztetett a Szent Ágota vezetőivel",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/28/katai-nemeth-vilmos-a-szent-agota-gyermekvedelmi-szolgaltato-vezetoivel-egyeztetett-miutan-a-rendorseg-a-telephelyein-akciozott?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/28/szent-agota-gyermekvedelmi-szolgaltato-egyeztetes-katai-nemeth-vilmos-gyurko-szilvia"
+        }
+      ]
+    },
+    {
+      "keyword": "Magyar Péter NATO",
+      "short_title": "Magyar Péter NATO-főtitkárral tárgyalt fegyverküldésről",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/05/28/magyar-peter-megbeszeles-mark-rutte-nato-fotitkar"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/28/magyar-talalkozott-a-nato-fotitkaraval-es-egy-macskaval-es-megismetelte-hogy-nem-kuldunk-fegyvert-ukrajnaba?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260528_magyar-peter-mark-rutte-nato-fotitkar-targyalas-ukrajnai-haboru"
+        }
+      ]
+    },
+    {
+      "keyword": "Sulyok lemondás",
+      "short_title": "Kétharmad szerint Sulyoknak mennie kellene",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/28/jo-ketharmad-szerint-sulyoknak-mennie-kene?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/05/28/sulyok-tamas-lemondas-nepszeruseg-21-kutatokozpont/"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260528_sulyok-tamas-azonnal-alairas-nemzetkozi-buntetobirosag-kilepes-visszavon"
+        }
+      ]
+    },
+    {
+      "keyword": "Népszava",
+      "short_title": "153 év után megszűnhet a Népszava",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/28/penteken-mar-nem-jelenik-meg-a-nepszava-153-ev-utan-itt-lehet-a-vege?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Orbán ENSZ",
+      "short_title": "Trump köre Orbánnak ENSZ-pozíciót szerezne",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260528_vsquare-egyesult-allamok-donald-trump-orban-viktor-ensz-pozicio"
+        }
+      ]
+    }
+  ]
+}
