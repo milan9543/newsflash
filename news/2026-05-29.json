@@ -1,0 +1,139 @@
+{
+  "date": "2026-05-29",
+  "world": [
+    {
+      "keyword": "Gaza",
+      "short_title": "Netanyahu directs IDF to expand Gaza control to 70%",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/ceqpelq5reqo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/29/un-100-of-gaza-should-be-for-palestinians?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Iran",
+      "short_title": "No deal after Trump's 'final determination' meeting on Iran",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c0r2d40r91qo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/29/iran-denies-ceasefire-deal-with-us-is?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Romania-Russia",
+      "short_title": "NATO and EU condemn Russia after drone hits Romania",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c93x4nxlkjeo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Poland-Ukraine",
+      "short_title": "Polish president threatens to strip Zelenskyy of top honour",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/5/29/polish-president-threatens-to-strip-ukraines-zelenskyy-of-top-state-honour?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cwy2q0g07kgo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "ICE shooting",
+      "short_title": "ICE agent arrested over shooting of Venezuelan man",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/5/29/ice-agent-arrested-over-shooting-of-venezuelan-man-in-us-immigration-raid?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "S&P hitelminősítés",
+      "short_title": "S&P megerősítette Magyarország hitelminősítését",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/gazdasag/2026/05/29/megerositette-a-magyar-allamados-osztalyzatot-az-s-p"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/gazdasag/20260529_s-p-minosites-hitelminosites-koltsegvetes-allamadossag-tulzottdeficit-eljaras"
+        }
+      ]
+    },
+    {
+      "keyword": "EPPO",
+      "short_title": "Európai Ügyészség visszamenőleg vizsgálhatja a NER-ügyeket",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/29/visszamenoleg-a-ner-es-ugyeket-is-vizsgalhatja-majd-az-europai-ugyeszseg?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Wizz Air",
+      "short_title": "Wizz Air vezér: Európában nincs kerozinválság",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/gazdasag/2026/05/29/wizz-air-varadi-jozsef-kerozin-hungarocontrol"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/05/29/wizz-air-varadi-jozsef-interju-kerozin/"
+        }
+      ]
+    },
+    {
+      "keyword": "Szabadkai zászlóégetés",
+      "short_title": "Szerb diákok magyar zászlót égettek Szabadkán",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/vilag/20260529_szabadka-szerb-magyar-diakok-zaszlo-egetes-feljelentes-kozepiskola"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/kozelet/2026/05/29/magyar-zaszlo-egetes-szerb-szabadka/"
+        }
+      ]
+    },
+    {
+      "keyword": "Djokovic Roland Garros",
+      "short_title": "Djokovic kétszettes előnyről kiesett a Roland Garroson",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/sport/2026/05/29/novak-djokovic-francia-nyilt-teniszbajnoksag-roland-garros"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/29/djokovic-elszalasztotta-a-nagy-eselyt-o-is-kiesett-a-roland-garroson?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/sport/2026/05/29/tenisz-roland-garros-novak-djokovic-kiesese/"
+        }
+      ]
+    }
+  ]
+}
