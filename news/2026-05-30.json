@@ -1,0 +1,135 @@
+{
+  "date": "2026-05-30",
+  "world": [
+    {
+      "keyword": "Ebola",
+      "short_title": "MSF warns of alarming Ebola spread in DR Congo",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c99ldxykz4zo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/30/women-bear-the-brunt-of-drcs-ebola-outbreak?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Iran-US",
+      "short_title": "No deal after Trump's 'final determination' Iran meeting",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c0r2d40r91qo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/5/30/iran-reasserts-control-over-hormuz-strait-as-deal-with-us-remains-elusive?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Ukraine-Romania",
+      "short_title": "Residents fear after drone hits Romanian city",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cvgzyp93jq1o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/5/30/putin-says-drone-that-crashed-in-romania-likely-ukrainian?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Champions League",
+      "short_title": "PSG win back-to-back Champions League titles on penalties",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/sports/2026/5/30/psg-beat-arsenal-to-win-back-to-back-champions-league-titles-after-shootout?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "AUKUS",
+      "short_title": "US, UK, Australia to develop underwater drone technology",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c5y8wjvd1ypo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "BL-döntő Budapest",
+      "short_title": "PSG tizenegyesekkel nyerte a budapesti BL-döntőt",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/sport/2026/05/30/psg-arsenal-budapest-bajnokok-ligaja-donto"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/30/a-varos-mar-lazban-eg-hamarosan-kezdodik-a-budapesti-bl-donto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/sport/foci/2026/05/30/tizenegyesekkel-nyerte-meg-a-budapesti-bl-dontot-a-cimvedo-psg/"
+        }
+      ]
+    },
+    {
+      "keyword": "NKA-botrány",
+      "short_title": "Citerarekord a Várban: Hankó 17 milliót adott rá",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/30/citera-nka-botrany-guinness-rekord-budai-var"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/30/tarr-zoltan-varja-hogy-valaki-feldobja-hanko-balazst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Habony-diplomata útlevél",
+      "short_title": "Habony kérésére indoklás nélkül osztottak diplomata útleveleket",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/30/habony-arpad-keresere-indoklas-nelkul-osztogatta-a-diplomata-utleveleket-a-szijjarto-fele-kulugy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Mészáros Lőrinc",
+      "short_title": "Mészáros és gyerekei 2 milliárdot vesznek ki cégükből",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/kkv/20260530_meszaros-fejer-b-a-l-bal-2025-beszamolo"
+        }
+      ]
+    },
+    {
+      "keyword": "Pécsi buszbaleset",
+      "short_title": "Pécsi buszbaleset: egy sérült még kórházban van",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/30/a-pecsi-buszbaleset-egy-14-eves-serultjet-meg-korhazban-apoljak-a-tobbi-serult-hazamehetett"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260530_a-pecsi-buszbaleset-egy-serultjet-meg-korhazban-apoljak-a-tobbieket-hazaengedtek"
+        }
+      ]
+    }
+  ]
+}
