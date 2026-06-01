@@ -1,0 +1,171 @@
+{
+  "date": "2026-05-31",
+  "world": [
+    {
+      "keyword": "Israel-Lebanon",
+      "short_title": "Israel seizes castle, expands Lebanon ground offensive",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cdep04kzz5wo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSUZTeU9KS3NvbWQyeEMxZzExYXByNTZFTGhYdU13Qzd5cExUVTlUdFVEb0lEdUZ1Vm1UWmRNMG9uY3dlT1JMeGNMX1BGVjUxQngza21sX1B2Yms2RkhOQnlwYXdDenQ4MF92N1R6NmpHRFBmd2ZiYkt6WGl0aGRYNXpzcFdSQWQ5dXo1NVU3clVwVHh0RE5BbEJYWktILWJ1aTFQWV9B?oc=5"
+        }
+      ]
+    },
+    {
+      "keyword": "Myanmar blast",
+      "short_title": "Explosion in Myanmar village kills over 45",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cglp7p787njo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQeEU3NnhDMDJ0OVk0azlGc01mbGJvN2RTb2Z6THJYZkNvaXpvY0YzazBhR2VSYW40Um1FVk9zN2xEVkdET2RCMkNxajAyQlNLX25Hald3Yl9CNVRXRFVjSTF2OTFfUFB5VDFJc09uWnVsdTJhZXFzV1VKYW5keHpubHBfT0E3eXlWX0FMRg?oc=5"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNalI3YnZRbVZ0VER4eUVqRHFqSHlfVWJlUjdlbkV0WV8tYUZ6SU1aT2lEVlZSWkw1dmg1SGZ1N2RQLUdadnFoTElBa2xuTl9mWE5mMW1zLWE3cUQzUE5qdFFxRjR5ZFpyNEJDcDlodG5CM0syRnhWSHphTDRaZUY4NEpFc05PaGNMYUFtWUVkY0h5OGlibEdYd1VLYXoyalNu?oc=5"
+        }
+      ]
+    },
+    {
+      "keyword": "Colombia election",
+      "short_title": "Colombia presidential runoff: De la Espriella vs Cepeda",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c2027g423glo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNd2tKcXA1Zk9GaW1VX3JOS1B3NlZWSzI5Z2JwWmp3REo2YVdQZE5uSDBlYzZLLWEyTUtCMGpQM05fd2R5OXNScXFILUl6LWx1MDE0LXR6Vk9RMmpfaG9BZk9jMDIzUU9YXy1hV2tqTk1MaWYyRG1FVFZxdVFmT0RUd0YxZnJLZ3g1enNGdURZYk9QYUVTVGFGdUV5d1phNUtL?oc=5"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOb29NNXhFVVZiQTVSV1FSTHgtdERxWG5OeDJMSkxJTXVVbTNUMFlCNnl6RFc1M2lNcjZ0YUZ0M3JJc1NQYTIyS1BUUW5jNkVnS3FmcXdseFFleV83Rl9iRElZRFdWLWE2NWN3R09meE83UGpHT3EyMXozVmRNNEM3UXZjenNNdVJHVzVoaWh4Y1IwUmZjdWlHSFJzMmVrSFNzZ2NUTHYwZFNLdVRzOWZMLVVkX2NfazM1TFVWdA?oc=5"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/5/31/cepeda-de-la-espriella-advance-in-colombias-presidential-election?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Champions League riots",
+      "short_title": "Hundreds arrested after Champions League riots in France",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c0r2ejg1w9xo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOd2stSW1GRC1BS3NDdjBUd1pIVmpuR3dITUJrWVE3bXJxdm5NM1BrNjYxcUk3ZTdnSF9pUHJaUUkxTnhJbjAzLXdva2VIOEhiN3dQQ0NwbnZQalAzUlpUVm5YV1I5QUJMRzZrTWlvWkNYVnVsamRPQU5VQzJlZmtNSTZxN1A2cnZrUDJjYTRsT0hoQUtoUFBPRHQ0RHVQMzV4TmMzY2xzSlJTS1BNRTVKWHFhaWVPcWVyOFlEZmMtNV9SUnUxR0ZWRQ?oc=5"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNa0dndUN0QkRLM284dGMybld6Tll5X3FmMFc0MWJGMHB3QU5TZXE2cENyWDBGMTVXWWRsLW9hZG9DNF83aVpCUWY3UkZaWXdZMnI5OHhQdVZTNEtnTzI5SjNzTnJvbTFxdmF0blBXWnJxbVhPTUhCZU04QUhlLWpPdlF3aDhzY2J0TTZfM0NBbXQ3SF9ya0tpSFZtaWZkS2ljVFg3Q0lBbWpxV1dsaHpZ?oc=5"
+        }
+      ]
+    },
+    {
+      "keyword": "Ebola",
+      "short_title": "Brazil monitors patients; Ebola cases emerge outside Africa",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cy72z48zd7po?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZ1JnY0kyR2Y5cXQ5N3pNSFhQRmFldk11djBqTXhJTVVyNTV4dGdCSXpuNVRTVVhOYkUxWGdBdVFFTmlva0g0c05lcndjSERIdnRXZVl6ckpDX2dvZElnLURDT2FaWlZRTjlybExnNExqYVpCSnp0MEptZWVDMy14aHdmaGVzVWlFbmdTX3lYQVdqcng2MkZOd1JuNFRLclo1aHJyUnRQWVhmbzM0NzZKRGM2d1RVakJoWnZ0eVl4T0FBUkpfT3p5NmlWMTVzOVVQQm55NktSdS1Qc0JwTDF6SWVR?oc=5"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Sulyok lemondás",
+      "short_title": "Sulyok Tamás bejelentette: nem mond le",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260531_sulyok-tamas-koztarsasagi-elnok-bejelentes-lemondas"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/31/sulyok-tamas-nem-mond-le-csak-torvenymodositas-utan-lenne-hajlando-tavozni"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/31/sulyok-tamas-nem-akar-menni?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "MTVA botrány",
+      "short_title": "MTVA kiszivárgott levelezés: elfogult hírigazgatói utasítások",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260531_jobbos-elemzoket-kezdjetek-el-kerlek-keresni-adta-utasitasba-az-mtva-hirigazgatoja-a-valasztasok-reggelen-magyar-azonnali-tavozasra-szolitotta-fel-a-vezerigazgatokat"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/05/31/rtl-hirado-mtva-belso-levelezes-nemeth-zsolt-tiszas-energiaterv-utasitas"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/31/a-mai-nap-fo-temaja-a-tiszas-energiaterv-ez-az-elnevezes-lecci-mindenhol-irjak-az-mtva-kiszivargott-belso-levelezeseben?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Szijjártó felesége",
+      "short_title": "Szijjártó feleségének cége 355 millió nyereséget termelt",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/gazdasag/2026/05/31/szijjarto-peter-szijjarto-nagy-szilvia-interior-design-kft-nyereseg-osztalek"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/31/szijjarto-peter-felesege-335-millios-osztalekot-vett-ki-honlap-es-telefonszam-nelkuli-cegebol?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/kkv/20260531_szijjarto-peter-nagy-szilvia-interior-design"
+        }
+      ]
+    },
+    {
+      "keyword": "Orbán apja",
+      "short_title": "Orbán apja 1,36 milliárdot vesz ki bányászcégeiből",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/gazdasag/2026/05/31/orban-gyozo-banyaszat-dolomit-kft-gant-nyereseg-osztalek-1-35-milliard"
+        }
+      ]
+    },
+    {
+      "keyword": "Jégkorong VB",
+      "short_title": "Finnország ötödször nyert jégkorong-világbajnokságot",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/sport/2026/05/31/jegkorong-a-csoportos-vb-donto-svajc-finnorszag"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/05/31/svajcnak-mar-megint-nem-sikerult-otodszor-nyert-jegkorong-vilagbajnoksagot-finnorszag?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    }
+  ]
+}
