@@ -1,0 +1,143 @@
+{
+  "date": "2026-06-01",
+  "world": [
+    {
+      "keyword": "Lebanon-Israel",
+      "short_title": "Hezbollah agrees reciprocal halt to attacks on Israel",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c202rxp1z15o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/inside-story/2026/6/1/is-the-u-s-backed-gaza-peace-process-in-serious-danger?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Ebola",
+      "short_title": "Three Ebola vaccines in development amid outbreak fears",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cn8pw93929wo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/1/kenyans-protest-ebola-quarantine-centre-for-us-citizens?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Denmark",
+      "short_title": "Denmark forms new government amid Greenland crisis",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/1/denmark-gets-new-government-as-greenland-crisis-persists?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Armenia-Russia",
+      "short_title": "Armenian PM rejects Russia's demand for EU referendum",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/1/armenian-pm-rejects-russias-demand-for-eu-referendum-as-relations-nosedive?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Russia sanctions",
+      "short_title": "France seizes sanctioned Russian oil tanker with UK help",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cn8pwgej1gxo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Szentkirályi leváltás",
+      "short_title": "Leváltották Szentkirályi Alexandrát a budapesti Fidesz éléről",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/01/tavozik-szentkiralyi-alexandra-a-fidesz-budapesti-szervezetenek-elerol"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/01/levaltottak-szentkiralyi-alexandrat-a-fovarosi-fidesz-elerol?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260601_eldolt-hogy-ki-szentkiralyi-alexandrat-a-fidesz-budapesti-szervezetenek-elen"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/01/szentkiralyi-budapest-fidesz-elnok/"
+        }
+      ]
+    },
+    {
+      "keyword": "Ukrajna béke",
+      "short_title": "Télig összejöhet a béke az ukrán elnöki iroda szerint",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/06/01/az-ukranok-szerint-realis-lehet-egy-bekemegallapodas-oroszorszaggal-a-tel-bekoszonteig"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/vilag/20260601_orosz-ukran-haboru-elnoki-iroda-kirilo-budanov-zelenszkij-trump-egyesult-allamok-befejezes-bekemegallapodas"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/kulfold/2026/06/01/ukrajna-haboru-lezarasa-tel-elott/"
+        }
+      ]
+    },
+    {
+      "keyword": "Hezbollah–Izrael",
+      "short_title": "Trump: Hezbollah és Izrael megállapodott a tűzszünetről",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/06/01/trump-targyalas-netanjahu-hezbollah"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/vilag/20260601_donald-trump-hezbollah-del-libanon-izrael-netanjahu-harci-cselekmenyek-leallitasa"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/kulfold/2026/06/01/trump-izrael-es-a-hezbollah-beleegyeztek-a-lovoldozes-leallitasaba/"
+        }
+      ]
+    },
+    {
+      "keyword": "EU migráció",
+      "short_title": "EU keményebb szabályokat fogadott el migránsok visszaküldéséről",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/06/01/eu-europai-parlament-europai-unio-tanacsa-migracio-visszakuldesi-rendelet"
+        }
+      ]
+    },
+    {
+      "keyword": "Balásy csőd",
+      "short_title": "Már fizetés sincs a Ferrari-halmozó Balásy Gyula cégeinél",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/01/mar-fizetes-sincs-a-ferrari-halmozo-balasy-gyula-cegeinel?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    }
+  ]
+}
