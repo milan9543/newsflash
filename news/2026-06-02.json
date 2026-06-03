@@ -1,0 +1,135 @@
+{
+  "date": "2026-06-02",
+  "world": [
+    {
+      "keyword": "Ukraine",
+      "short_title": "Russia launches massive overnight attack on Ukraine",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/2/russia-launches-massive-overnight-attack-on-ukraine?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c5y9nyvg9z2o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "US-Iran",
+      "short_title": "US fires missile at Iran-bound oil tanker",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c5yx135yg53o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Israel-Lebanon",
+      "short_title": "Israel strikes southern Lebanon, Hezbollah truce holds",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c936zvne0l6o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/2/trump-berated-netanyahu-scepticism-abounds-about-us-israel-feud-rumour?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Ebola",
+      "short_title": "DR Congo-Chile World Cup friendly cancelled over Ebola",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/sport/football/articles/cm2pd28jnyxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/2/protesters-use-ebola-coffin-to-rally-against-us-quarantine-centre?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Canada-US trade",
+      "short_title": "Canada requests 16-year renewal of North American trade pact",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cn9prr3w9nlo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Korrupció",
+      "short_title": "Fideszes politikusokat állítottak elő parkfenntartási ügyben",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/02/fideszes-politikusokat-is-eloallitottak-az-ugyeszseg-akciojaban?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260602_parkfenntartas-korrupcio-nyomozas-budapest-ebx"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/02/korrupcio-fidesz-lang-zsolt-gor-csaba-puskas-peter-breaking/"
+        }
+      ]
+    },
+    {
+      "keyword": "Tisza Párt",
+      "short_title": "Tisza Párt gigaplakát-tiltást és Szuverenitásvédelmi Hivatal megszüntetését javasolja",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/02/szuverenitasvedelmi-hivatal-megszuntetese-tisza-part-javaslat-alaptorveny-modositas"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/02/tisza-torvenyjavaslat-plakat-szuverenitasvedelmi-hivatal-allami-lakasok/"
+        }
+      ]
+    },
+    {
+      "keyword": "Orbán-Mészáros",
+      "short_title": "Orbán apja túlárazva szállított követ Mészáros cégének",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/gazdasag/20260602_orban-gyozo-orban-viktor-meszaros-lorinc-dolomit-v-hid-m1-autopalya-mkif-zrt-koncesszio-tularazas"
+        }
+      ]
+    },
+    {
+      "keyword": "Molnár Zsolt",
+      "short_title": "Ügyészség kezdeményezi Molnár Zsolt letartóztatását",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260602_molnar-zsolt-letartoztatas-kezdemenyezese-ugyeszseg-befolyassal-uzerkedes"
+        }
+      ]
+    },
+    {
+      "keyword": "Veszprém",
+      "short_title": "Veszprém százszázalékos teljesítménnyel lett kézilabda-bajnok",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/sport/2026/06/02/a-veszprem-szazszazalekos-teljesitmennyel-lett-kezilabdaban-magyar-bajnok"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/sport/2026/06/02/kezilabda-nb1-donto-szeged-veszprem-bodo/"
+        }
+      ]
+    }
+  ]
+}
