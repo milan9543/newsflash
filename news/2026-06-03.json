@@ -1,0 +1,159 @@
+{
+  "date": "2026-06-03",
+  "world": [
+    {
+      "keyword": "Iran-Kuwait",
+      "short_title": "Iranian drone strike kills one at Kuwait airport",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c5yx135yg53o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/3/kuwait-releases-cctv-footage-of-deadly-iranian-strike-on-airport?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "US-Iran war powers",
+      "short_title": "US House votes to halt Iran war powers",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cj6pldg39deo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOaXZBVGtQRWNUQXJnZ1ZIRy1ESnlmMTR6MXZMeGotWEJEV0JwTnJmVXdHYUJZazB3cjhrU2FLN0gyMk0tUlNPZDVYYUpLMzhhTUZFam9aLWpNWjNManFDVzFVTGFudDBCQnJja0V4YXFLNldHRUtvYTZBdVR5eTlZaHFKb1dHSjBHSXNMRHpZR3JGY21Kb1NONEJ3ckoxR3N4d3c"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/3/us-house-of-representatives-passes-war-powers-resolution-in-rebuke-to-trump?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Ukraine-Russia",
+      "short_title": "Massive Russian attack kills 22 across Ukraine",
+      "urls": [
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdGxXR2U4dDJ3b3g0YXhjUmhVaWE4enNrdmlGRy1hZ0tsalhWaFNzalQwTUlEY3Q2bzBfRUpZMWptek1IdjUyLS16U2I2eFpKbDVVd0tnbHh0WW40ak9VME0zNU1wVjd4WnI3V2s5NjJTV25HdG42VjFNVVJXbTRVb1RQUnhzSVcwWEVqNEJFS2JZM0pZTktYOF9LMVN3b1dz"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cy823n3ln29o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/3/ukraine-attacks-st-petersburg-as-russia-hosts-its-own-davos?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Lebanon-Israel",
+      "short_title": "Israeli strikes kill nine in Lebanon",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c5y01pdqvkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "India fire",
+      "short_title": "At least 21 killed in Delhi hotel fire",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/czd29327qzvo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/3/deadly-fire-rips-through-new-delhi-hotel?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Magyar Péter-Ukrajna",
+      "short_title": "Magyar Péter: megállapodás született a kisebbségi jogokról",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/06/03/magyar-peter-teljes-koru-megallapodasra-jutott-ukrajnaval-karpatalja-magyar-kisebbseg-jogok"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/03/magyar-peter-sikerult-megallapodni-ukrajnaval-a-magyar-kisebbsegi-jogokrol"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260603_magyar-peter-tisza-kormany-bejelentes"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/03/magyar-peter-ukrajna-megallapodas/"
+        }
+      ]
+    },
+    {
+      "keyword": "Parkfenntartás",
+      "short_title": "Momentumos politikusokat állított elő az ügyészség",
+      "urls": [
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/03/parkfenntartas-momentumos-politikusokat-is-eloallitott-az-ugyeszseg/"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/03/fideszes-es-oellenzeki-politikusok-eloallitva-ez-mar-a-rendszervaltas"
+        }
+      ]
+    },
+    {
+      "keyword": "Kegyelmi botrány",
+      "short_title": "Skrabski: Novák nem akart kegyelmet, de lobbizott érte",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/03/skrabski-fruzsina-szerint-novak-katalin-nem-akart-budahazy-gyorgyeknek-kegyelmet-adni-de-o-lobbizott-ertuk"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/03/gulyas-gergely-ultrahang-interju-fidesz-orban-magyar-peter-tisza-part-sikere-parlament-frakcio-kegyelmi-ugy"
+        }
+      ]
+    },
+    {
+      "keyword": "Romanowski",
+      "short_title": "Milliókat keresett Magyarországon a menedékes lengyel politikus",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/gazdasag/2026/06/03/17-5-millio-forintot-keresett-az-alapjogokert-kozpontnal-a-magyarorszagon-menedekjogot-kapott-lengyel-politikus"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/kkv/20260603_lengyelorszag-marcin-romanowski-vagyonnyilatkozat-alapjogokert-kozpont"
+        }
+      ]
+    },
+    {
+      "keyword": "Jahn Ferenc kórház",
+      "short_title": "Ápolók bántalmazhattak mozgáskorlátozott beteget kórházban",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/03/jahn-ferenc-del-pesti-korhaz-surgossegi-osztaly-bantalmazas"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/03/bantalmazas-jahn-Ferenc-korhaz/"
+        }
+      ]
+    }
+  ]
+}
