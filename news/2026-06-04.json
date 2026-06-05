@@ -1,0 +1,147 @@
+{
+  "date": "2026-06-04",
+  "world": [
+    {
+      "keyword": "Ukraine",
+      "short_title": "Zelensky proposes face-to-face talks with Putin",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cwy2ypyp4x4o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVDRlWGI2Vm5JaGFNQ2RNVUI4dzRQc1JBLWV0TllYalVTUEN6NnEtREpRdDFlTGJ6NFVfR3c3VElnODVHc2hLMXA2MXgtLUlzRzY3Z3h3bVh5ZVFYNkl6TV9DbU5INGlRUEpXWjdNM1A4cFRIRGJZc2dKaXVlcU1ueE1uNElGVDhjUzZWcWxjNA"
+        }
+      ]
+    },
+    {
+      "keyword": "Middle East",
+      "short_title": "Hezbollah rejects Israel-Lebanon ceasefire deal",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c052343r812o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/4/hezbollah-rejects-us-brokered-ceasefire-deal-between-israel-and-lebanon"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSmpJX19sVWJhRlNTaXliaENGNERBNml5RjhpcVNoczhXVzRYeHloci1NNElZVTExd19kb01Tcmg3bGNXTVFxczFOTjlCaHlxUmo0SmNnZExwanBsaFN2YmFROWJSNnRNZ3J0R2ttRmFBSjJZRzlDendBQmMzUVlPUUw0ZjBSQ0lkZ0l6ZDZ5czFmX1V5WEpjZU9lZ2lzS243bmpvb3FKYV8zZGhuWExCRnJ0Zkc"
+        }
+      ]
+    },
+    {
+      "keyword": "Iran",
+      "short_title": "Iran nuclear programme little changed, IAEA reports",
+      "urls": [
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOd0ljYkZKSjRhZ3B4bHVaYXY3eTdSUlhwWEJ5M1FFTmxMOU9NLUVVWVhuT1pZaDdPSmhlZGd3eUhoWkZ6OGx3UVU3SS13VVM3dnNnU2gzSkpMVXdfUU5NRU9DRVgxd2wxZk04UlNjalVScEtYdUlud3JUS3U5UUdsaF9UaXlRMkhrQVZKbGRRbUI5V2diNkZDaURDVndJS3NjSHJyRHBYYzFPUko2bGdsTGNoTmFJd2gweE1aNXRfUmNyVF9RdS1CcUpn"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOeUJLY2FURzR0NU9tVGcxLWNIa0pIZEJYVXg2eFF0NlkyYzI2VU5BcWRoMXd1S19lWjdfck5lVVJPMmRSSU1xVURMYmFqUWR3SEh4MWxOV2JJc2NWZVhWVlJnUmpHeDJKVGF6ZkwtcXQxZm1FMEZ5dXZrX0YxZERmUlVQRWF0cGxlUV9GSDNxS1ZwVVVxdEpaX3FfSHo3b1BudWRwbGxTaw"
+        }
+      ]
+    },
+    {
+      "keyword": "Trump",
+      "short_title": "Trump names Todd Blanche as attorney general nominee",
+      "urls": [
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPLUc1WWtFQlpHWDVsQzZZdlRsSXJTRHBNcVRwWXBOR2tjMmRGanJTQVZ2UGQ3NWZxSER6cENObnVWRkVSSXZZZS1pZnh2TllaTF95YlFRbmIzaTF3c2cxVERJQ09kNFdkSWU4YmpWV2UxYVVkM3pDVFcwSF80REcwN3QzcHI2emdXZlZrTV9LaTl4ZVBGa3RN"
+        }
+      ]
+    },
+    {
+      "keyword": "Gaza",
+      "short_title": "Israeli strikes kill 11 people in Gaza City",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cg5prr9gr1ro?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Azbesztbotrány",
+      "short_title": "Újabb félmillió tonna szennyezett kőzúzalék Magyarországra szállítva",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/04/tovabb-duzzad-az-azbesztbotrany-meg-felmillio-szennyezett-kozuzalek-magyarorszagra-szallitasa-derult-ki-egy-otodik-osztrak-banya-is-erintett"
+        }
+      ]
+    },
+    {
+      "keyword": "Őrsi Gergely",
+      "short_title": "Letartóztatott Őrsi Gergely üzent a II. kerületieknek",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/04/orsi-gergely-felhaborit-es-elszomorit-hogy-sarokba-szoritott-emberek-szavara-tortenhet-letartoztatas"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260604_orsi-gergely-letartoztatas-parkfenntartasi-botrany-uzenet-ebx"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/04/orsi-gergely-vedougyvedjen-keresztul-ii-kerulet/"
+        }
+      ]
+    },
+    {
+      "keyword": "Göd Samsung",
+      "short_title": "Gödi akkumulátorgyár zajszennyezése miatt feljelentés",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/04/hirtelen-mar-god-polgarmestere-szerint-zajszennyezo-a-godi-akkumulatorgyar"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260604_kammerer-zoltan-gajdos-laszlo-level-god-samsung-zajszennyezes"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/04/god-kammerer-zoltan-tisza-kormany-samsung-gyar-zajszennyezes/"
+        }
+      ]
+    },
+    {
+      "keyword": "Magyar Péter",
+      "short_title": "Magyar Péter mondatával felbosszantotta a szlovák külügyminisztert",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/04/magyar-peter-egyetlen-mondattal-felbosszantotta-a-szlovak-kulugyminisztert"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260604_magyar-peter-mondat-agara-haragit-szlovak-kulugyminiszter-trianon-evfordulo"
+        }
+      ]
+    },
+    {
+      "keyword": "Sameday",
+      "short_title": "Sameday kivonul Magyarországról, Easybox automaták eltűnnek",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/gazdasag/2026/06/04/sameday-kivonulas"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/04/kivonul-magyarorszagrol-a-sameday-eltunnek-az-easybox-automatak"
+        }
+      ]
+    }
+  ]
+}
