@@ -1,0 +1,139 @@
+{
+  "date": "2026-06-05",
+  "world": [
+    {
+      "keyword": "Ukraine-Russia",
+      "short_title": "Putin rejects meeting Zelensky to end war",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cpqpqx5qe40o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/5/zelenskyy-putin-choosing-war-by-rejecting-offer-for-in-person-talks?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Gaza",
+      "short_title": "Fear persists in Gaza amid ongoing Israeli strikes",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/5/pervasive-fear-grips-gaza-as-israeli-attacks-persist-despite-ceasefire?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "US courts",
+      "short_title": "Judge strikes down Trump asylum ban for 39 countries",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/5/judge-strikes-down-trump-bar-on-asylum-visa-processing-for-39-countries?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Sahara disaster",
+      "short_title": "Nearly 50 die of thirst after lorry breaks down",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c62r2ldyejro?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "AI safety",
+      "short_title": "Anthropic urges AI labs to pause over control risks",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/economy/2026/6/5/anthropic-urges-ai-labs-to-pause-warns-humans-risk-losing-control?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Foci-válogatott",
+      "short_title": "Varga duplájával verte Finnországot a magyar válogatott",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/sport/2026/06/05/magyarorszag-finnorszag-baratsagos-futball-merkozes"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/05/varga-barnabas-duplajaval-2-1-re-verte-a-magyar-futballvalogatott-a-finneket?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/sport/20260605_magyar-labdarugo-valogatott-finnorszag-baratsagos-merkozes-ebx"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/sport/foci/2026/06/05/magyarorszag-finnorszag-varga-barnabas-szappanos-peter/"
+        }
+      ]
+    },
+    {
+      "keyword": "Egészségügy",
+      "short_title": "Orvoshiány miatt leáll a szülészet Mátészalkán",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260605_orvoshiany-miatt-leall-a-szuleszet-a-mateszalkai-korhazban"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/05/mateszalka-orvoshiany-szuleszet-korhaz-leallas/"
+        }
+      ]
+    },
+    {
+      "keyword": "Loophia-baleset",
+      "short_title": "Újraélesztették a Loophia énekesnőjét a Budapest Parkban",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/after/2026/06/05/rosszul-lett-az-elefant-elozenekarakent-fellepo-loophia-enekesnoje-a-budapest-parkban"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/kultura/20260605_budapest-park-loophia-rosszullet-mentok-szolnoki-zsofia-sara"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/kultura/2026/06/05/loophia-ujraelesztes-szolnoki-zsofia-sara-budapest-park/"
+        }
+      ]
+    },
+    {
+      "keyword": "Mága-botrány",
+      "short_title": "Visszavonták Mága Zoltán cégének félmilliárdos NKA-támogatását",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/05/tarr-zoltan-visszavonta-a-maga-zoltan-fele-novo-studium-kft-felmilliard-forintos-nka-tamogatasat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Gyermekotthonok",
+      "short_title": "Visszahívják a rendőröket a gyermekotthonokból",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260605_katai-nemeth-vilmos-rendor-gyermekotthon"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/05/gyermekotthonok-rendori-jelenlet-megszunik-breaking/"
+        }
+      ]
+    }
+  ]
+}
