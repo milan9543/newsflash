@@ -1,12 +1,17 @@
-/**
- * News Diary - Cloudflare Worker
- * Runs at 00:00 UTC daily, collects news, calls Anthropic API, commits JSON to GitHub.
- *
- * Required environment secrets (set in Cloudflare Dashboard or wrangler.toml):
- *   ANTHROPIC_API_KEY   - Anthropic API key
- *   GITHUB_TOKEN        - GitHub personal access token (repo scope)
- *   GITHUB_REPO         - e.g. "yourname/news-diary"
- */
+// News Diary - Cloudflare Worker
+//
+// Cron schedule:
+//   "0 */4 * * *"  — fetch new articles, update running digest in KV
+//   "0 0   * * *"  — commit final digest to GitHub, clear KV state
+//
+// GET  /today  — return current KV digest as JSON (CORS-enabled)
+// POST /       — manual trigger (requires x-trigger-secret header)
+//
+// Required secrets (wrangler secret put):
+//   ANTHROPIC_API_KEY, GITHUB_TOKEN, GITHUB_REPO, TRIGGER_SECRET
+//
+// Required KV namespace binding:
+//   DIGEST_KV  (create with: wrangler kv namespace create DIGEST_KV)
 
 const NEWS_SOURCES = {
   world: [
@@ -32,7 +37,6 @@ const NEWS_SOURCES = {
 // ─── RSS Parser ──────────────────────────────────────────────────────────────
 
 function extractTag(xml, tag) {
-  // Handles both <tag>content</tag> and <tag><![CDATA[content]]></tag>
   const regex = new RegExp(
     `<${tag}[^>]*>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`,
     "i",
@@ -75,7 +79,7 @@ async function fetchFeed(source) {
     const cutoff = Date.now() - 24 * 60 * 60 * 1000;
     const items = parseRSS(xml)
       .filter((i) => {
-        if (!i.pubDate) return true; // keep if no date
+        if (!i.pubDate) return true;
         const t = Date.parse(i.pubDate);
         return isNaN(t) || t >= cutoff;
       })
@@ -87,14 +91,69 @@ async function fetchFeed(source) {
   }
 }
 
+// ─── KV Helpers ──────────────────────────────────────────────────────────────
+
+async function getSeenUrls(date, env) {
+  const raw = await env.DIGEST_KV.get(`seen_urls:${date}`);
+  if (!raw) return new Set();
+  try {
+    return new Set(JSON.parse(raw));
+  } catch {
+    return new Set();
+  }
+}
+
+async function saveSeenUrls(date, urlSet, env) {
+  await env.DIGEST_KV.put(`seen_urls:${date}`, JSON.stringify([...urlSet]), {
+    expirationTtl: 7 * 24 * 60 * 60, // keep for 7 days
+  });
+}
+
+async function getDigest(date, env) {
+  const raw = await env.DIGEST_KV.get(`digest:${date}`);
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+async function saveDigest(date, digest, env) {
+  const payload = { ...digest, updatedAt: new Date().toISOString() };
+  await env.DIGEST_KV.put(`digest:${date}`, JSON.stringify(payload), {
+    expirationTtl: 7 * 24 * 60 * 60,
+  });
+  return payload;
+}
+
+async function clearKvState(date, env) {
+  await Promise.all([
+    env.DIGEST_KV.delete(`digest:${date}`),
+    env.DIGEST_KV.delete(`seen_urls:${date}`),
+  ]);
+}
+
 // ─── Anthropic ───────────────────────────────────────────────────────────────
 
-function buildPrompt(date, worldArticles, hungaryArticles) {
-  const fmt = (arr) =>
-    arr
-      .map((a) => `SOURCE: ${a.source}\nTITLE: ${a.title}\nURL: ${a.link}`)
-      .join("\n\n");
+function fmtArticles(arr) {
+  return arr
+    .map((a) => `SOURCE: ${a.source}\nTITLE: ${a.title}\nURL: ${a.link}`)
+    .join("\n\n");
+}
 
+function fmtDigest(digest) {
+  const fmtItems = (items) =>
+    items
+      .map(
+        (item) =>
+          `  keyword: ${item.keyword}\n  short_title: ${item.short_title}\n  urls: ${item.urls.map((u) => `${u.name} — ${u.url}`).join(", ")}`,
+      )
+      .join("\n\n");
+  return `WORLD:\n${fmtItems(digest.world)}\n\nHUNGARY:\n${fmtItems(digest.hungary)}`;
+}
+
+function buildPrompt(date, worldArticles, hungaryArticles) {
   return `You are an experienced news editor. Curate a daily news digest for ${date}.
 
 From the WORLD articles below, select the 1–5 most globally significant stories.
@@ -115,10 +174,36 @@ Rules:
 Call the save_digest tool with your selections.
 
 WORLD ARTICLES:
-${fmt(worldArticles)}
+${fmtArticles(worldArticles)}
 
 HUNGARY ARTICLES:
-${fmt(hungaryArticles)}`;
+${fmtArticles(hungaryArticles)}`;
+}
+
+function buildUpdatePrompt(date, currentDigest, newWorldArticles, newHungaryArticles) {
+  return `You are an experienced news editor maintaining a live daily news digest for ${date}.
+
+CURRENT DIGEST:
+${fmtDigest(currentDigest)}
+
+NEW ARTICLES (published since last update):
+WORLD:
+${fmtArticles(newWorldArticles)}
+
+HUNGARY:
+${fmtArticles(newHungaryArticles)}
+
+Update the digest using these rules:
+- Keep the digest to at most 5 world and 5 hungary stories
+- If a new article covers the same story as an existing item, add its URL to that item's urls array (one URL per outlet, no duplicates)
+- If a new article is more important than an existing story, replace the least important existing story
+- If a new article is not more important than any existing story, keep the digest unchanged
+- If a new story has no existing match, add it if it's important enough (displacing the least important existing item if at 5)
+- Maintain importance ordering (most significant first)
+- Keep all existing rules: keywords in correct language, short_title max 8 words, one URL per outlet
+- Return the complete updated digest (all items, not just changes) via save_digest tool
+
+Call save_digest with the full updated digest.`;
 }
 
 const DIGEST_TOOL = {
@@ -283,7 +368,6 @@ async function commitToGitHub(date, payload, env) {
     "User-Agent": "NewsDiary-Worker/1.0",
   };
 
-  // Check if file already exists (get SHA for update)
   let sha;
   const check = await fetch(apiBase, { headers });
   if (check.ok) {
@@ -292,10 +376,13 @@ async function commitToGitHub(date, payload, env) {
     console.log(`[github] File exists for ${date}, will update.`);
   }
 
+  // Strip updatedAt from committed JSON — it's a live-only field
+  const { updatedAt: _drop, ...commitPayload } = payload;
+
   const body = {
     message: `news: add digest for ${date}`,
     content: btoa(
-      unescape(encodeURIComponent(JSON.stringify(payload, null, 2))),
+      unescape(encodeURIComponent(JSON.stringify(commitPayload, null, 2))),
     ),
     ...(sha && { sha }),
   };
@@ -313,47 +400,140 @@ async function commitToGitHub(date, payload, env) {
   console.log(`[github] Committed ${path} successfully.`);
 }
 
+// ─── Cron Handlers ───────────────────────────────────────────────────────────
+
+async function runUpdate(date, env) {
+  console.log(`[update] Starting update run for ${date}`);
+
+  const [worldAllItems, hungaryAllItems] = await Promise.all([
+    Promise.all(NEWS_SOURCES.world.map(fetchFeed)).then((r) => r.flat()),
+    Promise.all(NEWS_SOURCES.hungary.map(fetchFeed)).then((r) => r.flat()),
+  ]);
+
+  console.log(
+    `[update] Fetched ${worldAllItems.length} world / ${hungaryAllItems.length} hungary articles`,
+  );
+
+  const seenUrls = await getSeenUrls(date, env);
+  console.log(`[update] Already seen ${seenUrls.size} URLs`);
+
+  const worldNew = worldAllItems.filter((a) => !seenUrls.has(a.link));
+  const hungaryNew = hungaryAllItems.filter((a) => !seenUrls.has(a.link));
+
+  console.log(
+    `[update] New (unseen): ${worldNew.length} world / ${hungaryNew.length} hungary`,
+  );
+
+  if (worldNew.length === 0 && hungaryNew.length === 0) {
+    console.log("[update] No new articles — skipping Claude call.");
+    return null;
+  }
+
+  const currentDigest = await getDigest(date, env);
+  const mode = currentDigest ? "incremental update" : "initial build";
+  console.log(`[update] Calling Claude (${mode}) with ${worldNew.length} world / ${hungaryNew.length} hungary new articles`);
+
+  let prompt;
+  if (currentDigest) {
+    prompt = buildUpdatePrompt(date, currentDigest, worldNew, hungaryNew);
+  } else {
+    prompt = buildPrompt(date, worldNew, hungaryNew);
+  }
+
+  let result;
+  try {
+    result = await callAnthropic(prompt, env.ANTHROPIC_API_KEY);
+  } catch (err) {
+    console.error(`[update] Claude call failed for ${date}:`, err.message);
+    throw err;
+  }
+
+  console.log(
+    `[update] Claude returned ${result.world?.length} world / ${result.hungary?.length} hungary items`,
+  );
+
+  const updated = await saveDigest(date, result, env);
+  console.log(`[update] Digest saved to KV (updatedAt: ${updated.updatedAt})`);
+
+  // Mark all fetched URLs as seen (not just new ones, to handle URL variations)
+  const prevSize = seenUrls.size;
+  for (const a of [...worldAllItems, ...hungaryAllItems]) seenUrls.add(a.link);
+  await saveSeenUrls(date, seenUrls, env);
+  console.log(`[update] Seen URLs updated: ${prevSize} → ${seenUrls.size}`);
+
+  return updated;
+}
+
+async function runMidnight(date, env) {
+  console.log(`[midnight] Starting midnight run for ${date}`);
+  const digest = await getDigest(date, env);
+
+  if (!digest) {
+    console.warn(`[midnight] No KV digest found for ${date} — running fresh update before commit.`);
+    const fresh = await runUpdate(date, env);
+    if (!fresh) throw new Error(`[midnight] No articles fetched for ${date} — aborting commit.`);
+    await commitToGitHub(date, fresh, env);
+  } else {
+    console.log(`[midnight] Found KV digest for ${date} (updatedAt: ${digest.updatedAt}) — committing.`);
+    await commitToGitHub(date, digest, env);
+  }
+
+  await clearKvState(date, env);
+  console.log(`[midnight] KV state cleared for ${date}. Done.`);
+}
+
 // ─── Main handler ────────────────────────────────────────────────────────────
 
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
 export default {
-  // Cron trigger: 0 0 * * *  (midnight UTC)
-  async scheduled(_event, env, _ctx) {
-    // Yesterday in UTC
-    const d = new Date();
-    d.setUTCDate(d.getUTCDate() - 1);
-    const date = d.toISOString().slice(0, 10); // YYYY-MM-DD
+  async scheduled(event, env, _ctx) {
+    const now = new Date(event.scheduledTime ?? Date.now());
+    const utcHour = now.getUTCHours();
+    const date = now.toISOString().slice(0, 10);
 
-    console.log(`[worker] Starting digest for ${date}`);
-
-    // Fetch all feeds in parallel
-    const [worldItems, hungaryItems] = await Promise.all([
-      Promise.all(NEWS_SOURCES.world.map(fetchFeed)).then((r) => r.flat()),
-      Promise.all(NEWS_SOURCES.hungary.map(fetchFeed)).then((r) => r.flat()),
-    ]);
-
-    console.log(
-      `[worker] Fetched ${worldItems.length} world / ${hungaryItems.length} hungary articles`,
-    );
-
-    if (worldItems.length === 0 && hungaryItems.length === 0) {
-      throw new Error("No articles fetched — aborting.");
+    if (utcHour === 0) {
+      // Midnight: commit yesterday's digest, clear state
+      const yesterday = new Date(now);
+      yesterday.setUTCDate(yesterday.getUTCDate() - 1);
+      const yesterdayStr = yesterday.toISOString().slice(0, 10);
+      console.log(`[worker] Midnight run — committing digest for ${yesterdayStr}`);
+      await runMidnight(yesterdayStr, env);
+    } else {
+      // Every 4h: update running digest for today
+      console.log(`[worker] Update run — refreshing digest for ${date}`);
+      await runUpdate(date, env);
     }
-
-    // Ask Claude to curate
-    const prompt = buildPrompt(date, worldItems, hungaryItems);
-    const payload = await callAnthropic(prompt, env.ANTHROPIC_API_KEY);
-    console.log(
-      `[worker] Got ${payload.world?.length} world / ${payload.hungary?.length} hungary items from Claude`,
-    );
-
-    // Commit to GitHub
-    await commitToGitHub(date, payload, env);
-    console.log(`[worker] Done for ${date}.`);
-    return payload;
   },
 
-  // HTTP handler for manual triggering — requires secret token
   async fetch(request, env, _ctx) {
+    const url = new URL(request.url);
+
+    // Live digest endpoint
+    if (request.method === "GET" && url.pathname === "/today") {
+      const today = new Date().toISOString().slice(0, 10);
+      const digest = await getDigest(today, env);
+      if (!digest) {
+        return new Response(JSON.stringify({ error: "No digest yet for today" }), {
+          status: 404,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+      return new Response(JSON.stringify(digest), {
+        status: 200,
+        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      });
+    }
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, { status: 204, headers: CORS_HEADERS });
+    }
+
+    // Manual trigger
     if (request.method !== "POST") {
       return new Response("Not found.", { status: 404 });
     }
@@ -361,8 +541,10 @@ export default {
     if (!env.TRIGGER_SECRET || token !== env.TRIGGER_SECRET) {
       return new Response("Not found.", { status: 404 });
     }
-    const payload = await this.scheduled(null, env, null);
-    return new Response(JSON.stringify(payload, null, 2), {
+
+    const today = new Date().toISOString().slice(0, 10);
+    const result = await runUpdate(today, env);
+    return new Response(JSON.stringify(result, null, 2), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });

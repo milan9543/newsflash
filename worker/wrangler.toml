@@ -1,9 +1,14 @@
 name = "newsflash-worker"
 main = "index.js"
 compatibility_date = "2024-01-01"
+account_id = "3029852f9337aa3cbb544e46c56a9c2f"
+
+[[kv_namespaces]]
+binding = "DIGEST_KV"
+id = "b4c42c483ced4c2cba4c13584203605d"
 
 [triggers]
-crons = ["0 0 * * *"]
+crons = ["0 */4 * * *", "0 0 * * *"]
 
 # Secrets are set via `wrangler secret put` — do not put real values here.
 # Required:
