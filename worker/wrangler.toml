@@ -16,3 +16,7 @@ crons = ["0 0 * * *"]
 # ANTHROPIC_API_KEY=sk-ant-...
 # GITHUB_TOKEN=ghp_...
 # GITHUB_REPO=yourname/newsflash
+
+[observability.logs]
+enabled = true
+invocation_logs = true
