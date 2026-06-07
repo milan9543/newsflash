@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const workerUrl = import.meta.env.PUBLIC_WORKER_URL ?? "";
+---
+
+<Layout title="Ma" description="Mai élő hírösszefoglaló — világ és Magyarország.">
+  <div id="digest-root" class="font-hand max-w-7xl flex flex-col justify-center items-center p-2 md:p-8 gap-4 w-full">
+    <p id="loading" class="text-ink opacity-60 mt-16 text-lg">Töltés…</p>
+  </div>
+
+  <nav class="font-hand mt-8 flex flex-row flex-wrap items-center justify-center gap-3 max-w-4xl w-full px-4 md:px-8 pb-8">
+    <a
+      href="/calendar"
+      class="text-ink border-2 border-ink rounded-[3px] px-3 py-1 text-base hover:bg-ink hover:text-paper transition-colors duration-150"
+    >
+      Naptár
+    </a>
+  </nav>
+</Layout>
+
+<script define:vars={{ workerUrl }}>
+  const OUTLET_COLORS = {
+    "bbc.com":        { bg: "#000",     fg: "#fff" },
+    "apnews.com":     { bg: "#FE332F",  fg: "#fff" },
+    "reuters.com":    { bg: "#D64000",  fg: "#fff" },
+    "aljazeera.com":  { bg: "#FA9001",  fg: "#fff" },
+    "telex.hu":       { bg: "#113356",  fg: "#fff" },
+    "444.hu":         { bg: "#FFF671",  fg: "#1B1B1B" },
+    "hvg.hu":         { bg: "#F26522",  fg: "#fff" },
+    "24.hu":          { bg: "#FB4743",  fg: "#fff" },
+  };
+
+  function outletStyle(name) {
+    const c = OUTLET_COLORS[name];
+    return c ? `color:${c.fg};background:${c.bg};padding:1px 6px;border-radius:3px;text-decoration:none;font-size:0.85em;` : "";
+  }
+
+  function renderItems(items, color, circleDir) {
+    return items.map((item, i) => `
+      <li class="flex flex-row gap-2 font-bold items-start justify-start">
+        <div class="flex flex-row gap-2 items-center">
+          <div class="relative size-12">
+            <img src="/images/circle_${circleDir}/${circleDir}_${i + 1}_sm.webp" alt="" class="absolute inset-0 size-12" />
+            <span class="absolute inset-0 flex items-center justify-center text-${color} text-md font-bold">${i + 1}</span>
+          </div>
+        </div>
+        <div class="pt-2">
+          <p class="text-lg">${item.keyword}</p>
+          <p class="text-ink text-lg">${item.short_title ?? item.title ?? ""}</p>
+          <div class="flex flex-row flex-wrap gap-2 mt-1">
+            ${(item.urls ?? []).map(u => `
+              <a href="${u.url}" target="_blank" rel="noopener noreferrer"
+                 style="${outletStyle(u.name)}"
+                 class="text-ink opacity-50 hover:opacity-100 transition-opacity duration-150">
+                ${u.name}
+              </a>
+            `).join("")}
+          </div>
+        </div>
+      </li>
+    `).join("");
+  }
+
+  function renderDigest(data) {
+    const dateLabel = new Date(data.date + "T12:00:00").toLocaleDateString("hu-HU");
+    const updatedLabel = data.updatedAt
+      ? new Date(data.updatedAt).toLocaleTimeString("hu-HU", { hour: "2-digit", minute: "2-digit" })
+      : null;
+
+    return `
+      <div class="relative flex flex-col items-center justify-center mb-4">
+        <div class="relative flex items-center justify-center">
+          <img src="/images/ribbon_sm.webp" alt="" class="h-20 w-auto" />
+          <span class="mb-1 absolute inset-0 flex items-center justify-center text-lg text-ink font-bold">
+            ${dateLabel}
+          </span>
+        </div>
+        ${updatedLabel ? `<p class="text-ink opacity-50 text-sm mt-1">Frissítve: ${updatedLabel}</p>` : ""}
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-stretch gap-2 w-full">
+        ${data.hungary?.length > 0 ? `
+          <section class="text-red flex flex-col items-start mb-4 flex-1 p-2 md:p-4">
+            <h2 class="underline uppercase mb-8 text-2xl text-center w-full">
+              <span class="relative inline-block underline">
+                <img src="/images/flag_hu_sm.webp" alt="HU" class="absolute right-full top-1/2 -translate-y-1/2 mr-2 h-10 w-auto" />
+                Magyarország
+              </span>
+            </h2>
+            <ul class="flex flex-col gap-4">
+              ${renderItems(data.hungary, "red", "red")}
+            </ul>
+          </section>
+        ` : ""}
+
+        <div class="hidden md:flex md:items-stretch px-2">
+          <div class="w-[2px] self-stretch bg-ink rounded-sm"></div>
+        </div>
+        <div class="md:hidden py-4">
+          <div class="h-[2px] w-full bg-ink rounded-sm"></div>
+        </div>
+
+        ${data.world?.length > 0 ? `
+          <section class="text-pen flex flex-col items-start mb-4 flex-1 p-2 md:p-4">
+            <h2 class="underline uppercase mb-8 text-2xl text-center w-full">
+              <span class="relative inline-block underline">
+                <img src="/images/earth_sm.webp" alt="" class="absolute right-full top-1/2 -translate-y-1/2 mr-2 h-10 w-auto" />
+                World
+              </span>
+            </h2>
+            <ul class="flex flex-col gap-4">
+              ${renderItems(data.world, "pen", "blue")}
+            </ul>
+          </section>
+        ` : ""}
+      </div>
+    `;
+  }
+
+  async function load() {
+    const root = document.getElementById("digest-root");
+    const loading = document.getElementById("loading");
+
+    try {
+      const url = workerUrl ? `${workerUrl}/today` : "/today-fallback";
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      loading.remove();
+      root.insertAdjacentHTML("afterbegin", renderDigest(data));
+    } catch (err) {
+      loading.textContent = "A mai összefoglaló még nem elérhető.";
+      console.error("[today] fetch failed:", err);
+    }
+  }
+
+  load();
+</script>
