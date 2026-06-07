@@ -25,19 +25,19 @@ export interface Props {
 const { data } = Astro.props;
 
 const OUTLET_COLORS: Record<string, { bg: string; fg: string }> = {
-  BBC: { bg: "#000", fg: "#fff" },
-  AP: { bg: "#FE332F", fg: "#fff" },
-  Reuters: { bg: "#D64000", fg: "#fff" },
-  "Al Jazeera": { bg: "#FA9001", fg: "#fff" },
-  Telex: { bg: "#113356", fg: "#fff" },
-  "444": { bg: "#FFF671", fg: "#1B1B1B" },
-  HVG: { bg: "#F26522", fg: "#fff" },
-  "24.hu": { bg: "#FB4743", fg: "#fff" },
+  "bbc.com":       { bg: "#000",    fg: "#fff" },
+  "apnews.com":    { bg: "#FE332F", fg: "#fff" },
+  "reuters.com":   { bg: "#D64000", fg: "#fff" },
+  "aljazeera.com": { bg: "#FA9001", fg: "#fff" },
+  "telex.hu":      { bg: "#113356", fg: "#fff" },
+  "444.hu":        { bg: "#FFF671", fg: "#1B1B1B" },
+  "hvg.hu":        { bg: "#F26522", fg: "#fff" },
+  "24.hu":         { bg: "#FB4743", fg: "#fff" },
 };
 
 function outletStyle(name: string) {
   const c = OUTLET_COLORS[name];
-  return c ? `--chip-color:${c.bg};--chip-fg:${c.fg}` : "";
+  return c ? `color:${c.fg};background:${c.bg};padding:1px 6px;border-radius:3px;font-size:0.85em;` : "";
 }
 ---
 
