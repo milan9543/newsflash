@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const todayISO = new Date().toISOString().slice(0, 10);
+
 const files = import.meta.glob("../../news/*.json", { eager: true });
 
 const articleDates = new Set(
@@ -118,6 +120,7 @@ const monthLabels = months.map(({ year, month }) => monthLabel(year, month));
                       if (!day) return <td class="p-1 text-center" />;
                       const iso = `${year}-${pad(month)}-${pad(day)}`;
                       const hasArticle = articleDates.has(iso);
+                      const isToday = iso === todayISO;
                       return (
                         <td class="p-1 text-center">
                           {hasArticle ? (
@@ -128,6 +131,14 @@ const monthLabels = months.map(({ year, month }) => monthLabel(year, month));
                             >
                               <span class="text-base">{day}</span>
                               <span class="absolute bottom-[3px] w-1 h-1 rounded-full bg-current" />
+                            </a>
+                          ) : isToday ? (
+                            <a
+                              href="/today"
+                              data-date={iso}
+                              class="cal-day inline-flex items-center justify-center w-9 h-9 text-ink-soft text-base"
+                            >
+                              {day}
                             </a>
                           ) : (
                             <span

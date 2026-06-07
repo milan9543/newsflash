@@ -60,7 +60,7 @@ const jsonLd = {
       prev ? (
         <a
           href={`/${prev}`}
-          class="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-150"
+          class="no-underline flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-150"
         >
           <img
             src="/images/arrow_red_sm.webp"
@@ -75,7 +75,7 @@ const jsonLd = {
     }
     <a
       href="/calendar"
-      class="text-ink border-2 border-ink rounded-[3px] px-3 py-1 text-base hover:bg-ink hover:text-paper transition-colors duration-150"
+      class="no-underline text-ink border-2 border-ink rounded-[3px] px-3 py-1 text-base hover:bg-ink hover:text-paper transition-colors duration-150"
     >
       Naptár
     </a>
@@ -83,7 +83,7 @@ const jsonLd = {
       next ? (
         <a
           href={`/${next}`}
-          class="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-150"
+          class="no-underline flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-150"
         >
           <span class="hidden sm:inline text-pen text-base">{next}</span>
           <img src="/images/arrow_blue_sm.webp" alt="→" class="h-10 w-auto" />
@@ -91,7 +91,7 @@ const jsonLd = {
       ) : (
         <a
           href="/today"
-          class="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-150"
+          class="no-underline flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-150"
         >
           <span class="hidden sm:inline text-pen text-base">Ma</span>
           <img src="/images/arrow_blue_sm.webp" alt="→" class="h-10 w-auto" />
