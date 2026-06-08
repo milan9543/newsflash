@@ -1,0 +1,191 @@
+{
+  "date": "2026-06-07",
+  "world": [
+    {
+      "keyword": "US-Iran War",
+      "short_title": "US and Iran exchange strikes in Gulf",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNnZsdGU2c1U4bVEtODZxTlpvd0x5VGNja3hYTHZSUVJjZGI2VG5XUEVkck1NdG5Rb0tTenNyYWJJa1BUVzlsVmpiM1lOWjhaMmM2a1lWOFZVcnh2MnhzMkM2YjV4ZVF0MmIzenE4MmFoaE9pQ014R1oxS2RXR0kzejZLUVNYQUZOdUxhLW13SWE3WEI2QUcyLUs4el96QnFiZzkweHROVERfRVdCVEx6ZA"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/economy/2026/6/7/100-days-into-iran-war-americans-face-higher-prices?traffic_source=rss"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/07/trump-mar-abban-van-hogy-o-soha-nem-mondta-hogy-nem-kezd-uj-haborukat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Chornobyl Drone Strike",
+      "short_title": "Russian drone hits nuclear storage near Chornobyl",
+      "urls": [
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxObHBWaFhyaGpwQXhrT3RaUGtWN2lwV0lJX1FEWVV1Tno5NDFOdVpWQUVIdjJrSlNXOTBmclZLX1J6RDNGYWhwcXVJNHVrWjNaazgzY19uZHFvR0pLNzBROTA2aTJOSWxFZ3k0Ry00OW9vSl9NeHIxWmtnVzN5Y1Q1RmYtTHZrVVh5cWJqT2FIQ1FkUm85NFcyQjZPR0dFakE1OFpjNldvNjUyX0dqaFpVbXJqWGZ6OW9XaHY1aXlWSG01dw"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cr7xr1g3nvvo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/7/russian-drone-strike-damages-site-near-chornobyl-nuclear-plant?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Israel-Gaza-Lebanon",
+      "short_title": "Israel strikes Beirut; kills nine in Gaza",
+      "urls": [
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRGxmNFFiT1M0RGNKMG9OMjhoYi1OZ0RsM19Eb2xrdktzYzAwYi1wRDVqTGRvWVFaSFBMR3ZkeFRQSkRmXzUtWHk0VVZmN1VtbVZtVndRMGNham5tMkh4RVJQbFE3ZUFpYWtTV0lqX3NvcjEwbENsd0UzWFJ5aGtLa0prM0RKSDU2VHpEYTNjZ2g0QjNSQ1JCQ1pHeTFjOUQweEMweGlnZWJuMXg3RUloZUNaY25qb0d1Q1ZQZ2s1M3BESUtEcmc"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/7/israeli-army-kills-nine-in-gaza-as-mediators-renew-diplomacy-in-cairo?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c0qyevk8139o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Christian Eriksen Collapse",
+      "short_title": "Eriksen collapses during Denmark football match",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/sport/football/articles/czrxgd2nljno?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/sports/2026/6/7/denmarks-christian-eriksen-collapses-during-world-cup-warm-up-match?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "French Open Zverev",
+      "short_title": "Zverev wins first Grand Slam at French Open",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/sports/2026/6/7/alexander-zverev-wins-french-open-to-claim-first-grand-slam-title?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Nagy Márton szállodák",
+      "short_title": "Nagy Márton ötcsillagos szállodákban szállt meg",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/07/nagy-marton-tobbszor-is-otcsillagos-hotelekben-szallt-meg-naponta-egymillio-forintba-kerult"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/07/700-ezerert-szallt-meg-nagy-marton-parizsban-egy-ejszakara?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260607_nagy-marton-uti-koltseg-magangep-otcsillagos-szalloda"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/07/rtl-nagy-marton-otcsillagos-hotelekben-szallt-meg-az-egyik-utja-35-millioba-kerult-az-adofizetoknek/"
+        }
+      ]
+    },
+    {
+      "keyword": "Politikai menedékjog felülvizsgálat",
+      "short_title": "BM felülvizsgálja politikai alapon adott menekültstátuszokat",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/07/politikai-alapon-megadott-menekult-jogallasok-felulvizsgalata-belugyminiszterium-marcin-romanowski-zbigniew-ziobro"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/07/felulvizsgalja-a-politikai-alapon-adott-menekultstatuszokat-a-bm?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260607_politikai-menedekjog-vizsgalat-belugyminiszterium"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/07/a-bm-bejelentett-mar-folyik-a-politikai-alapon-megadott-menekultstatusok-felulvizsgalata/"
+        }
+      ]
+    },
+    {
+      "keyword": "Sulyok Tamás tüntetés",
+      "short_title": "Több százan gyűltek össze Sulyok mellett",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/07/szimpatiatuntetes-az-allami-intezmenyvezetok-mellett-sandor-palota-sulyok-tamas-fidesz"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260607_tuntetes-sulyok-tamas-koztarsasagi-elnok-sandor-palota"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/07/magyar-peter-sulyok-tamas-szimpatiatuntetes-reakcio/"
+        }
+      ]
+    },
+    {
+      "keyword": "Csernobil drón",
+      "short_title": "Orosz drón csapódott csernobili nukleáris tárolóba",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/07/orosz-drontamadas-a-kiegett-futoelemek-raktaraban-csernobilban?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/vilag/20260607_orosz-dron-csernobil-kiegett-nuklearis-futoelemek-tarololetesitmeny"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/06/07/oroszorszag-ukrajna-tamadas-csernobil-raktar"
+        }
+      ]
+    },
+    {
+      "keyword": "Győr kézilabda BL",
+      "short_title": "Győr kikapott a női kézilabda BL-döntőben",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/sport/2026/06/07/noi-kezi-bajnokok-ligaja-gyor-metz-donto-mvm-dome"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/07/kikapott-a-gyor-a-dontoben-a-ket-magyarral-jatszo-francia-metz-nyerte-a-noi-kezilabda-bajnokok-ligajat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/sport/20260607_gyori-eto-kezilabda-bl-metz-ebx"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/sport/2026/06/07/a-gyort-legyozve-irt-tortenelmet-a-metz-a-bl-dontoben/"
+        }
+      ]
+    }
+  ]
+}
