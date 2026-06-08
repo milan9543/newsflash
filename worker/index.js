@@ -93,19 +93,26 @@ async function fetchFeed(source) {
 
 // ─── KV Helpers ──────────────────────────────────────────────────────────────
 
-async function getSeenUrls(date, env) {
-  const raw = await env.DIGEST_KV.get(`seen_urls:${date}`);
-  if (!raw) return new Set();
+const SEEN_TTL_DAYS = 3;
+const SEEN_KV_KEY = "seen_urls:global";
+
+async function getSeenMap(env) {
+  const raw = await env.DIGEST_KV.get(SEEN_KV_KEY);
+  if (!raw) return new Map();
   try {
-    return new Set(JSON.parse(raw));
+    return new Map(JSON.parse(raw)); // [[url, isoDate], ...]
   } catch {
-    return new Set();
+    return new Map();
   }
 }
 
-async function saveSeenUrls(date, urlSet, env) {
-  await env.DIGEST_KV.put(`seen_urls:${date}`, JSON.stringify([...urlSet]), {
-    expirationTtl: 7 * 24 * 60 * 60, // keep for 7 days
+async function saveSeenMap(seenMap, env) {
+  const cutoff = Date.now() - SEEN_TTL_DAYS * 24 * 60 * 60 * 1000;
+  for (const [url, dateStr] of seenMap) {
+    if (Date.parse(dateStr) < cutoff) seenMap.delete(url);
+  }
+  await env.DIGEST_KV.put(SEEN_KV_KEY, JSON.stringify([...seenMap]), {
+    expirationTtl: (SEEN_TTL_DAYS + 1) * 24 * 60 * 60,
   });
 }
 
@@ -128,10 +135,7 @@ async function saveDigest(date, digest, env) {
 }
 
 async function clearKvState(date, env) {
-  await Promise.all([
-    env.DIGEST_KV.delete(`digest:${date}`),
-    env.DIGEST_KV.delete(`seen_urls:${date}`),
-  ]);
+  await env.DIGEST_KV.delete(`digest:${date}`);
 }
 
 // ─── Anthropic ───────────────────────────────────────────────────────────────
@@ -414,7 +418,7 @@ async function runUpdate(date, env) {
     `[update] Fetched ${worldAllItems.length} world / ${hungaryAllItems.length} hungary articles`,
   );
 
-  const seenUrls = await getSeenUrls(date, env);
+  const seenUrls = await getSeenMap(env);
   console.log(`[update] Already seen ${seenUrls.size} URLs`);
 
   const worldNew = worldAllItems.filter((a) => !seenUrls.has(a.link));
@@ -457,8 +461,8 @@ async function runUpdate(date, env) {
 
   // Mark all fetched URLs as seen (not just new ones, to handle URL variations)
   const prevSize = seenUrls.size;
-  for (const a of [...worldAllItems, ...hungaryAllItems]) seenUrls.add(a.link);
-  await saveSeenUrls(date, seenUrls, env);
+  for (const a of [...worldAllItems, ...hungaryAllItems]) seenUrls.set(a.link, date);
+  await saveSeenMap(seenUrls, env);
   console.log(`[update] Seen URLs updated: ${prevSize} → ${seenUrls.size}`);
 
   return updated;
