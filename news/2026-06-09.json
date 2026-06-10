@@ -1,0 +1,175 @@
+{
+  "date": "2026-06-09",
+  "world": [
+    {
+      "keyword": "Israel-Iran",
+      "short_title": "Iran shoots down US helicopter; Trump vows response",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/9/trump-says-iran-shot-down-us-helicopters-over-hormuz-vows-to-respond?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cze9359gglyo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNmxoM2tuRUdrbmdsOTJaS0Q3NktYRi1oaXFtZkZ2SXNHSThGVk5SLVFNdm1udVZrb25La3ZmRGo5QTcyVXZzbE9qM1lFV1N0MDlUTHpTOFFQaERBMUhraEU5MERodXc5VkdIcWpDQUNoeEI2bGNxZUJINVRaYktLZFhPMjUzODFybzlza013dU10Vi1CNWZSMzcxX2x6ZjhDUDRsSG1Wa3pkZW42RVV4b3Z0SVNaQWFWQ1E"
+        }
+      ]
+    },
+    {
+      "keyword": "Israel-Lebanon",
+      "short_title": "Israeli strikes hit Tyre; Trump says peace deal near",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c36y16nkr5no?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/9/trump-says-in-final-throes-of-peace-deal-but-at-least-8-killed-in-tyre?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Ukraine-Russia",
+      "short_title": "Russian attacks kill 5; Ukraine strikes fuel supplies",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/9/russian-attacks-kill-5-in-ukraine-as-zelenskyy-hails-talks-with-us-envoys?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cn75l36vdd8o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Philippines",
+      "short_title": "Philippines earthquake toll rises to 37",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/9/race-to-find-survivors-as-philippines-quake-toll-rises-to-37?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/ckg50pypn2eo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQzRQUTJsQ0hpQmxnT3RleHNZZzkxaE44dnI5UVR5VGIyRDlKMDJyb0NETm10cW9UVllPTWk0TnVaNVJBb3pMeWpmUS1wa2h4TlpUZW9UM3VnLTh5aG5EZ2s1Q0pLU0RjM1NHQm1ZNERMRDFnWEJld2FmdzYzU1FCMU9Qd1dTZXhFT2c"
+        }
+      ]
+    },
+    {
+      "keyword": "China-North Korea",
+      "short_title": "Xi and Kim vow stronger ties at Pyongyang summit",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/ceqdnpzv45po?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/economy/2026/6/9/xi-kim-pledge-to-boost-ties-at-rare-pyongyang-summit?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Budapest fizetésképtelenség",
+      "short_title": "Karácsony: Budapest jövő héten fizetésképtelenné válik",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/09/karacsony-gergely-jelenlegi-tudasunk-szerint-a-fovarosi-onkormanyzat-a-jovo-heten-fizeteskeptelenne-fog-valni?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/gazdasag/20260609_szolidaritasi-ado-karacsony-gergely-fopolgarmester-onkormanyzat-magyar-allamkincstar"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/09/karacsony-gergely-fovaros-szolidaritasi-hozzajarulas/"
+        }
+      ]
+    },
+    {
+      "keyword": "EU-források törvénycsomag",
+      "short_title": "Kormány benyújtotta az uniós forrásokhoz szükséges csomagot",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/09/orszaggyules-korrupcioellenes-es-atlathatosagi-csomag-eu-helyreallitasi-alap-vagyonnyilatkozat-kekva-1"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/09/benyujtotta-a-kormany-az-unios-forrasok-hazahozatalahoz-szukseges-torvenyjavaslatot?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/09/magyar-peter-unio-tamogatas-torvenycsomag-breking/"
+        }
+      ]
+    },
+    {
+      "keyword": "Szuverenitásvédelmi Hivatal",
+      "short_title": "Parlament dönt a Szuverenitásvédelmi Hivatal megszüntetéséről",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/09/szuverenitasvedelmi-hivatal-torveny-parlament-vita-tisza-part-fidesz"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/09/korusban-enekelhetik-a-parlamentben-a-szuverenitasvedelmi-hivatal-hattyudalat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/09/parlament-magyar-peter-tisza-szuverenitasvedelmi-hivatal/"
+        }
+      ]
+    },
+    {
+      "keyword": "Biró Ferenc",
+      "short_title": "Integritás Hatóság elnöke: politikai indíttatású eljárás indult ellene",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/09/biro-ferenc-pal-kozponti-nyomozo-fougyeszseg-eljaras-reakcio"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/09/a-fideszes-minisztereknek-nekimeno-biro-ferenc-ugy-allitja-be-mintha-az-interjuja-miatt-emelt-volna-ellene-hirtelen-vadat-az-ugyeszseg?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/09/havasi-bertalan-biro-ferenc-reagalas-vademeles-integritas-hatosag/"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/360/20260609_biro-ferenc-integritas-hatosag-tisza-part-asz"
+        }
+      ]
+    },
+    {
+      "keyword": "Mohácsi híd",
+      "short_title": "Mohácsi híd: szerkezeti hiba, milliárdokat utaltak ki választás előtt",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/09/mohacsi-hid-feluljaro-betonszerkezeti-hiba-bontas"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/09/vitezy-meg-a-valasztas-elott-ket-nappal-is-kiutaltak-lazarek-szazmilliardot-szijj-laszlo-cegenek-a-mohacsi-hidra?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    }
+  ]
+}
