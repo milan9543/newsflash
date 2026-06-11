@@ -1,0 +1,187 @@
+{
+  "date": "2026-06-10",
+  "world": [
+    {
+      "keyword": "Iran conflict",
+      "short_title": "Trump hardens tone, threatens more Iran strikes",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/10/trump-hardens-tone-against-iran-says-may-keep-going-with-strikes?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/ce371kw2ex2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTFFLOUhHaFBaY2l1YWthbGVtYVByYlZkU3VhRXJxWEJiTmdwNVFWVU5FN0ZSRml0bVU5S3F1Wi1QdFp1bTQ0SE4zeXJadzZ5LVBtdFNHTHh5WWxnTHh5bHVCejk2Zl9HenVXQUNDSGNYWFgtdWVad0NFVWdwZjl0cnRuQ3ZLNUt6NW80Q2Q5cm1iRUpjMk9OVjFRZ3NIa1JNR2JkUHROZzZId2ZDUHJuQWNHcm5icGd1?oc=5"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZUdOeWRybkJaaDV4dzVCMFdsOUJSSHhBaHliNV9WajdMUXgxTGx2QldYLXF3akJSSW5meGpzcW53QnFqOWpKQVpkci1aTUY4WEtkYlFGNHk3b3B0ci0zSjYzOENmd2xzcEFzUVBFbi04dk5QdTF3dWRPTGVJemJ3cmprRURzeFQ2T1YtejUxUVFMMXBKWTJjU1ZXcDAxTEZPTnp0OTJ3?oc=5"
+        }
+      ]
+    },
+    {
+      "keyword": "Ukraine war",
+      "short_title": "Ukrainian missiles hit military plant deep in Russia",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/10/ukrainian-drones-strike-sevastopol-museum-and-key-russian-oil-refineries?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c5yzm2nzgr2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWHRqb3c5OS1la0dWUGJTbFBDSzg0TU1NOUc1R0ttQ3BXeFIyQmdJdExnQW4tQkUyenlwdklzRHo4ZGNhT3hvVjVDM0dOLU0tSUtFdloxWXFreTA1c0tSVEcwbHY4XzFYT2dZTEJkVkFCbnM4SmZpVnUyNld0SFJjRGhTOXUtcWlzTlRaSGpjM2RRYlY4RjgtU1FHUQ?oc=5"
+        }
+      ]
+    },
+    {
+      "keyword": "Afghanistan-Pakistan",
+      "short_title": "Afghanistan: Pakistan air raids kill 13 people",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/10/afghanistan-says-pakistan-air-raids-killed-13-people-including-children?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cvg57nk373lo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "apnews.com",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORmsxVzlkQzRlZG5tMkV3dDgwOVhpNmhXYUpJYlFrOG5vLWxCcV9CXy1vTlJ2Y0N4R21WUHVnc0NPVXZNSkF3Um95eDJfN3l1YTJZVmg1SWhIUllJRlFGOF84VlhEMUJEc21JeWhoSGVfejljMTN0Z0Z3M2VfcTlCRWpvV01DU25PUTRwa28yNEotbkphZEZZZmZGdlRsSGhMbjJ4VWJscUNicEk?oc=5"
+        }
+      ]
+    },
+    {
+      "keyword": "Israel-Lebanon",
+      "short_title": "Israeli strikes in southern Lebanon kill 17",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cpq3d44l907o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/10/israeli-strike-on-a-car-kills-two-in-sidon-lebanon?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Belfast riots",
+      "short_title": "Belfast riots erupt after refugee knife attack",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/10/protesters-torch-cars-buildings-in-belfast-after-knife-attack?traffic_source=rss"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/10/birosag-ele-allitottak-a-belfasti-keseles-gyanusitottjat-starmer-az-internetes-uszitokat-is-felelosse-tette-a-zavargasokert?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Irán-USA konfliktus",
+      "short_title": "Trump: Irán fizetni fog, folytatódhat a csapás",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/06/10/trump-szerint-itt-az-ido-iran-fizetni-fog"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/vilag/20260610_trump-valaszcsapas-amerikai-hadsereg-irani-celpontok-helikopter-hormuzi-szoros"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/10/trump-ujabb-csapasokkal-fenyegette-meg-irant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Uniós törvénycsomag",
+      "short_title": "Rendkívüli parlamenti ülés az uniós pénzek miatt",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260610_torvenycsomag-unios-penzek-szupermerfoldkovek-magyar-ruff-tisza-ebx"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/10/az-unios-kepviselok-tudni-szeretnek-mirol-is-allapodott-meg-von-der-leyen-es-magyar-peter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/10/ruff-balint-rendkivuli-ules-kezdemenyezes-unios-penzek"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/kulfold/2026/06/10/modositott-helyreallitasi-terv-benyujtasa-hivatalos/"
+        }
+      ]
+    },
+    {
+      "keyword": "Kormányülés döntések",
+      "short_title": "Kamatstop, vagyonadó, kriptók: kormányülés döntései",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/10/magyar-peter-kormanyules-dontesek-korhazi-klimak-kriptovaluta-kamatstop-nemzeti-hitvallas"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/10/leszedeti-a-tisza-kormany-a-kozintezmenyek-falarol-a-nemzeti-hitvallast-targyaltak-a-vagyonado-bevezeteset?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260610_magyar-peter-kormanyules-dontes-babavaro-diakhitel-kamatstop-mohacsi-duna-hid-unios-forrasok"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/10/kamatstop-vagyonado-kriptovalutak-itt-vannak-a-szerdai-kormanyules-legfontosabb-dontesei/"
+        }
+      ]
+    },
+    {
+      "keyword": "Győrfi Pál leváltás",
+      "short_title": "Hegedűs Zsolt Győrfi Pál leváltásáról nyilatkozott",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/10/hegedus-zsolt-gyorfi-pal-levaltas-reakcio"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/10/hegedus-zsolt-gyorfi-pal-lecsereleserol-a-mentoknek-nem-celebarcokra-nem-intezmenyvedo-reflexekre-es-nem-pr-mondatokra-van-szukseguk?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "Ukrán háború",
+      "short_title": "Ukrán rakéták csaptak be orosz hadiipari célpontokba",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/10/ukran-raketak-csapodtak-be-egy-orosz-hadiipari-uzembe-es-egy-olajfinomitoba-900-kilometerrel-a-frontvonal-mogott?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/vilag/20260610_ukran-kulugyi-szovivo-magyar-peter-volodimir-zelenszkij-talalkozo"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/10/kijev-szerint-kozel-zelenszkij-es-magyar-peter-talalkozoja-breaking/"
+        }
+      ]
+    }
+  ]
+}
