@@ -1,0 +1,155 @@
+{
+  "date": "2026-06-11",
+  "world": [
+    {
+      "keyword": "Iran-US War",
+      "short_title": "Trump cancels Iran strikes, cites successful talks",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/11/trump-says-us-will-be-taking-kharg-island-in-latest-iran-war-threat?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c4gyp9v0e93o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "UK Defence",
+      "short_title": "UK Defence Minister Healey resigns over spending",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/11/britains-defence-%e2%81%a0minister-healey-quits-over-defence-spending?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c9q2lq3vv7zo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Sudan Conflict",
+      "short_title": "Drone strikes kill up to 23 at Sudan funeral",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c70yeee2jvqo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/11/drone-strikes-on-central-sudanese-city-kill-up-to-23-ngo?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "FIFA World Cup",
+      "short_title": "World Cup kicks off in Mexico with Shakira",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/sports/2026/6/11/fifas-infantino-defends-us-as-world-cup-host-amid-visa-row-entry-denials?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c2ly928xz8go?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Iran Nuclear",
+      "short_title": "UN watchdog demands Iran nuclear stockpile information",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/11/un-watchdog-demands-iran-provide-information-on-nuclear-stockpile?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Irán-USA háború",
+      "short_title": "Irán lezárja a Hormuzi-szorost újabb amerikai csapások után",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/kulfold/2026/06/11/az-ujabb-amerikai-csapasok-utan-iran-a-hormuzi-szoros-lezarasat-jelentette-be"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/vilag/20260611_amerikai-hadsereg-irani-celpontok-elleni-muvelet-legi-csapas"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/11/az-amerikaiak-del-irani-celpontokat-lottek-iran-a-regioban-talalhato-amerikai-bazisokat-tamadta"
+        }
+      ]
+    },
+    {
+      "keyword": "Sulyok AB",
+      "short_title": "Sulyok az Alkotmánybírósághoz fordul eltávolítása ellen",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/11/sulyok-tamas-aggodik-az-eltavolitasat-celzo-alaptorveny-modositas-miatt-ezert-az-alkotmanybirosaghoz-fordul"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260611_sulyok-tamas-alkotmanybirosag-magyar-peter"
+        }
+      ]
+    },
+    {
+      "keyword": "Fürcht főügyész lemondás",
+      "short_title": "Lemondott a Központi Nyomozó Főügyészség vezetője",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/11/lemondott-a-kozponti-nyomozo-fougyeszseg-vezetoje"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/11/lemondott-furcht-pal-fougyesz"
+        }
+      ]
+    },
+    {
+      "keyword": "Matolcsy MNB",
+      "short_title": "Matolcsy 170 millió forint végkielégítéssel távozott az MNB-től",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/gazdasag/2026/06/11/matolcsy-gyorgy-170-millio-szabadsag-magyar-nemzeti-bank-vizsgalat"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/11/matolcsy-szinte-soha-nem-volt-szabadsagon-brutto-122-millio-utotte-a-markat"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/gazdasag/20260611_mnb-matocsy-szabadsagmegvaltas-170-millio-belso-vizsgalat"
+        }
+      ]
+    },
+    {
+      "keyword": "Készenléti Rendőrség",
+      "short_title": "Pósfai leváltotta a Készenléti Rendőrség parancsnokát",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/11/posfai-gabor-belugyminiszterium-keszenleti-rendorseg-levaltas-kinevezes"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260611_felmentette-a-keszenleti-rendorseg-parancsnokat-a-belugyminiszter"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/11/keszenleti-rendorseg-uj-parancsnok-marko-attila/"
+        }
+      ]
+    }
+  ]
+}
