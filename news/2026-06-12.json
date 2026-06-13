@@ -1,0 +1,155 @@
+{
+  "date": "2026-06-12",
+  "world": [
+    {
+      "keyword": "Iran deal",
+      "short_title": "Trump claims Iran deal near, Tehran disagrees",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/economy/2026/6/12/stocks-markets-surge-as-trump-calls-off-strikes-on-iran-touts-peace-deal?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c78y6w78828o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Gaza",
+      "short_title": "Israel launches overnight strikes across Gaza",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/12/israel-launches-overnight-strikes-across-gaza?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cewpwjr9rj4o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Ukraine war",
+      "short_title": "Putin admits Ukraine attacks hitting Russian economy",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/12/ukraine-reclaims-territory-in-may-as-it-doubles-strikes-on-russian-logistic?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "World Cup 2026",
+      "short_title": "World Cup day 2: USA and Canada begin",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/sports/2026/6/12/usa-vs-paraguay-world-cup-2026-group-match-trump-schedule-lineups?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cpv32417nlwo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Elon Musk",
+      "short_title": "SpaceX IPO makes Musk world's first trillionaire",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/economy/2026/6/12/spacex-ipo-debuts-in-us-markets-musk-becomes-worlds-first-trillionaire?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Titkosszolgálat-leváltás",
+      "short_title": "Magyar Péter leváltotta mind a négy titkosszolgálat-vezetőt",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/12/kozlony-magyar-peter-felmentette-a-negy-titkosszolgalat-vezetojet"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/12/magyar-peter-felmentette-az-osszes-nemzetbiztonsagi-vezetot?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/12/magyar-peter-titkosszolgalati-vezetok-menesztes/"
+        }
+      ]
+    },
+    {
+      "keyword": "MTVA átalakítás",
+      "short_title": "MTVA megszűnik, jön a Független Közmédia Testület",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/12/vege-az-mtva-nak-a-teljes-kozmedia-atalakul-jon-a-sajtoalap-es-a-fuggetlen-kozmedia-testulet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        }
+      ]
+    },
+    {
+      "keyword": "M1-es baleset",
+      "short_title": "Nyolcan meghaltak az M1-esen Győr közelében",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/12/kigyulladt-egy-kamion-az-m1-esen-miutan-munkagepekkel-utkozott"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/12/nyolcan-meghaltak-ket-egymast-koveto-balesetben-az-m1-esen-gyor-kozeleben?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/12/m1-es-autopaly-moldav-kisbusz-aldozatok/"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260612_jelentest-magyar-peter-kozlekedesbiztonsag-m1-autopalya-felujitas"
+        }
+      ]
+    },
+    {
+      "keyword": "Miniszterelnökség-leváltások",
+      "short_title": "Orbán Balázs embereit kirúgták a Miniszterelnökségről",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/12/orban-balazs-embereit-rugtak-ki-a-miniszterelnoksegrol?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260612_kirugas-miniszterelnokseg-orban-balazs-ruff-balint"
+        }
+      ]
+    },
+    {
+      "keyword": "Kárpátaljai magyarok megállapodás",
+      "short_title": "Hivatalos a magyar kisebbségi megállapodás Ukrajnával",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/12/magyar-peter-hivatalossa-valt-ukrajna-magyarorszag-megallapodas-karpataljai-magyarok-ugyeben"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/12/hivatalos-a-megallapodas-ukrajnaval-a-magyar-kisebbsegi-jogokrol?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260612_magyar-peter-a-magyar-kisebbseg-helyzetevel-kapcsolatos-ukran-vallalasok-vegrehajtasa-unios-elvarassa-valt"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/12/magyar-peter-karpataljai-magyarok-ukrajna-unios-csatlakozas-breaking/"
+        }
+      ]
+    }
+  ]
+}
