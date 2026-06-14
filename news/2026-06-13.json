@@ -1,0 +1,175 @@
+{
+  "date": "2026-06-13",
+  "world": [
+    {
+      "keyword": "Iran",
+      "short_title": "Trump says Iran deal to be signed Sunday",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/6/13/iran-war-live-us-tehran-signal-peace-deal-within-reach-but-not-signed-yet?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "FIFA World Cup",
+      "short_title": "World Cup opens in US with ceremony and results",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/sports/2026/6/13/world-cup-kicks-off-in-us-as-katy-perry-future-headline-opening-ceremony?traffic_source=rss"
+        },
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/sport/football/articles/c14y0dp6vrdo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Anthropic",
+      "short_title": "US orders Anthropic to disable AI for foreigners",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c932g3v3e13o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/13/us-orders-anthropic-to-disable-ai-models-for-all-foreign-nationals?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Kennedy Center",
+      "short_title": "Trump's name removed from Kennedy Center",
+      "urls": [
+        {
+          "name": "bbc.com",
+          "url": "https://www.bbc.com/news/articles/c5yzd4dgxw4o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/13/workers-remove-trumps-name-from-kennedy-center-after-court-ruling?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Albania",
+      "short_title": "Albania protests escalate over Kushner coastal development",
+      "urls": [
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/6/13/albania-protests-escalate-over-kushner-backed-coastal-development?traffic_source=rss"
+        }
+      ]
+    }
+  ],
+  "hungary": [
+    {
+      "keyword": "Fidesz kongresszus",
+      "short_title": "Orbán a választási vereségről értekezett a kongresszuson",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/13/orban-viktor-a-valasztasi-veresegrol-a-donto-tenyezo-a-velunk-szemben-manoverezo-negy-ellenseges-hadtest-ereje-es-osszehangolt-tamadasa-volt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/13/orban-beleallt-a-varga-judit-os-hasonlatba/"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/13/fidesz-hidveghi-balazs-fidesz-kongresszus-kritika"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260613_varga-judit-is-megszolalt-miutan-orban-vele-peldalozott"
+        },
+        {
+          "name": "aljazeera.com",
+          "url": "https://www.aljazeera.com/news/2026/6/13/hungarys-former-pm-orban-re-elected-party-leader-despite-election-loss?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "keyword": "Vitnyéd menekülttábor",
+      "short_title": "Magyar leleplezi a vitnyédi menekülttábor titkos terveit",
+      "urls": [
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/13/magyar-peter-az-orban-kormany-sokszor-hazudott-a-migracioval-kapcsolatban-is?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/13/2026-ra-szukseges-a-migracioval-kapcsolatos-politikai-konfliktust-kielezni-a-legfontosabb-reszletek-a-vitnyedi-migranstabor-titkos-terveirol"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/13/vitnyed-menekulttabor-letesitese-fidesz-migracio/"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260613_oktatasi-cel-vitnyed-migranstabor-szent-istvan-egyetem"
+        }
+      ]
+    },
+    {
+      "keyword": "Magyar Péter",
+      "short_title": "Magyar Péter menesztette a titkosszolgálatok vezetőit",
+      "urls": [
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260612_magyar-peter-titkosszolgalatok-vezetok-menesztes"
+        },
+        {
+          "name": "444.hu",
+          "url": "https://444.hu/2026/06/12/tobb-mint-negyven-helyettes-allamtitkart-menesztett-magyar-peter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_syndication"
+        },
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/13/alkotmanyvedelmi-hivatal-nemzetbiztonsagi-szakszolgalat-kinevezes"
+        }
+      ]
+    },
+    {
+      "keyword": "Foci-vb 2026",
+      "short_title": "USA 4-1-re verte Paraguayt a vb-nyitómeccsen",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/sport/2026/06/13/foci-vb-2026-usa-paraguay-d-csoport-nyitomeccs-4-1-folarin-balogun-christian-pulisic-ongol"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/sport/foci/2026/06/13/foci-vb-2026-usa-paraguay/"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/sport/20260613_mi-mindenkit-udvozlunk-mindenki-befogadunk-ilyen-volt-az-usa-paraguay-meccs-egy-kaliforniai-sorkertben"
+        }
+      ]
+    },
+    {
+      "keyword": "Kormánybiztosok",
+      "short_title": "Magyar Péter kormánybiztossá nevezte ki Bódist, Rostot, Radnait",
+      "urls": [
+        {
+          "name": "telex.hu",
+          "url": "https://telex.hu/belfold/2026/06/12/bodis-kriszta-radnai-mark-rost-andrea-kormanybiztosok-kinevezesei"
+        },
+        {
+          "name": "24.hu",
+          "url": "https://24.hu/belfold/2026/06/12/radnai-mark-bodis-kriszta-kormanybiztos/"
+        },
+        {
+          "name": "hvg.hu",
+          "url": "https://hvg.hu/itthon/20260613_alakul-a-miniszteriumok-vezetoi-csapata"
+        }
+      ]
+    }
+  ]
+}
